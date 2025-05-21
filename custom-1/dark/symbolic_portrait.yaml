@@ -86,7 +86,7 @@ backspace背景: &backspace_bg
 backspace前景: &backspace_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.5
   fontSize: 0.94em
   normalColor: *backspace_textcolor
   highlightColor: *backspace_textcolor
@@ -94,7 +94,7 @@ backspace前景: &backspace_qj
 功能键前景: &Function_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.5
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -391,6 +391,7 @@ HStackStyle:
   size:
     height: 2.2/10
 
+#类别页
 categoryCollection:
   size:
     width: 60/375
@@ -443,7 +444,7 @@ returnButtonBackgroundStyle:
 
 returnButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *Function_qj
 
 pageUpButton:
@@ -459,7 +460,7 @@ systemButtonBackgroundStyle:
 
 pageUpButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: chevron.up.circle.fill
   <<: *Function_qj
 
 pageDownButton:
@@ -471,7 +472,7 @@ pageDownButton:
 
 pageDownButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: 	chevron.down.circle.fill
   <<: *Function_qj
 
 lockButton:
@@ -491,12 +492,12 @@ lockButtonBackgroundStyle:
 
 lockButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: lock.fill
   <<: *Function_qj
 
 unlockButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: lock.open.fill
   <<: *Function_qj
 
 backspaceButton:
@@ -513,11 +514,11 @@ backspaceButtonBackgroundStyle:
 
 backspaceButtonForegroundStyle:
   animation: animation
-  text: 
+  systemImageName: delete.left
   <<: *backspace_qj
 
 dataSource:
-  category: [常用, 中文, 英文, 数学, 角标, 序号, 音标, 箭头, 特殊, 拼音, 注音, 竖标, 部首, 拉丁, 制表, 字体]
+  category: [常用, 中文, 英文, 数学, 角标, 序号, 音标, 箭头, 特殊, 拼音, 注音, 竖标, 部首, 拉丁, 制表]
   常用:
     - “”
     - ‘’
@@ -675,505 +676,3 @@ dataSource:
   音标: [ɑː, 'ɔ:', ɜː, 'i:', 'u:', ʌ, ɒ, ə, ɪ, ʊ, e, æ, eɪ, aɪ, ɔɪ, ɪə, eə, ʊə, əʊ,
     aʊ, p, t, k, f, θ, s, b, d, g, v, ð, z, ʃ, h, ts, tʃ, j, tr, ʒ, r, dz, dʒ, dr,
     w, m, n, ŋ, l]
-  字体:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-

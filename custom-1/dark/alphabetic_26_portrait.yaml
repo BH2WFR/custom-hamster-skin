@@ -93,8 +93,7 @@
     y: 0.95
   text: /中
   fontSize: 0.6em
-  normalColor: *key_textcolor2
-                               #A1A5AE
+  normalColor: *key_textcolor2 #A1A5AE
   highlightColor: *key_textcolor2
 
 26键字符: &zf
@@ -244,12 +243,29 @@ ButtonSwipeDownHintForeground: &xhqp
   fontSize: 1.125em
   normalColor: *hdqp_Color
 
+#下划气泡字符样式 (加长版)
+ButtonSwipeDownHintForegroundLong: &xhqp_long
+  center:
+    x: 0.5
+    y: 0.8
+  fontSize: 0.6em
+  normalColor: *hdqp_Color
+
 #长按气泡字符样式
 ButtonHoldSymbolsOfqForeground: &iaqp
   fontSize: 1em
   center:
     x: 0.5
     y: 0.66
+  normalColor: *iaqp_Color
+  highlightColor: *iaqp_Color_hl
+
+#长按气泡字符样式 （加长版）
+ButtonHoldSymbolsOfqForegroundLong: &iaqp_long
+  fontSize: 0.9em
+  center:
+    x: 0.5
+    y: 0.59
   normalColor: *iaqp_Color
   highlightColor: *iaqp_Color_hl
 
@@ -272,6 +288,11 @@ verticalCandidateBackgroundStyle:
 keyboardBackgroundStyle:
   type: original
   normalColor: *bg_Color
+
+# 浮动键盘大小
+# floatTargetScale:
+#   x: 0.5
+#   y: 0.7
 
 #按键背景动画
 animation:
@@ -2486,7 +2507,7 @@ zButtonUpForegroundStyle:
 
 zButtonDownForegroundStyle:
   animation: animation
-  text: 󰱒
+  text: 选
   <<: *xhzf
 
 zButtonHintStyle:
@@ -2504,8 +2525,8 @@ zButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 zButtonSwipeDownHintForegroundStyle:
-  text: 󰱒
-  <<: *xhqp
+  text: '选中'
+  <<: *xhqp_long
 
 zButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -2582,7 +2603,7 @@ xButtonUpForegroundStyle:
 
 xButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 剪
   <<: *xhzf
 
 xButtonHintStyle:
@@ -2600,8 +2621,8 @@ xButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 xButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '剪切'
+  <<: *xhqp_long
 
 xButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -2672,7 +2693,7 @@ cButtonUpForegroundStyle:
 
 cButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 複
   <<: *xhzf
 
 cButtonHintStyle:
@@ -2690,8 +2711,8 @@ cButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 cButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '复制'
+  <<: *xhqp_long
 
 cButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -2756,7 +2777,7 @@ vButtonUpForegroundStyle:
 
 vButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 粘
   <<: *xhzf
 
 vButtonHintStyle:
@@ -2774,8 +2795,8 @@ vButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 vButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '粘贴'
+  <<: *xhqp_long
 
 vButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -2840,7 +2861,7 @@ bButtonUpForegroundStyle:
 
 bButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 浮
   <<: *xhzf
 
 bButtonHintStyle:
@@ -2858,8 +2879,8 @@ bButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 bButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '浮动'
+  <<: *xhqp_long
 
 bButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -2924,7 +2945,7 @@ nButtonUpForegroundStyle:
 
 nButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 首
   <<: *xhzf
 
 nButtonHintStyle:
@@ -2942,8 +2963,8 @@ nButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 nButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '行首'
+  <<: *xhqp_long
 
 nButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -3014,7 +3035,7 @@ mButtonUpForegroundStyle:
 
 mButtonDownForegroundStyle:
   animation: animation
-  text: 
+  text: 尾
   <<: *xhzf
 
 mButtonHintStyle:
@@ -3032,8 +3053,8 @@ mButtonSwipeUpHintForegroundStyle:
   <<: *uhqp
 
 mButtonSwipeDownHintForegroundStyle:
-  text: 
-  <<: *xhqp
+  text: '行尾'
+  <<: *xhqp_long
 
 mButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
@@ -3211,11 +3232,11 @@ dotButtonHoldSymbolsStyle:
 
 dotButtonHoldSymbolsForegroundStyle0:
   text: 几重
-  <<: *iaqp
+  <<: *iaqp_long
 
 dotButtonHoldSymbolsForegroundStyle1:
   text: 拆分
-  <<: *iaqp
+  <<: *iaqp_long
 
 spaceButton:
   backgroundStyle: spaceButtonBackgroundStyle
@@ -3259,6 +3280,7 @@ cnenButton:
   foregroundStyle:
   - cnenButtonForegroundStyle1
   - cnenButtonForegroundStyle2
+  - cnenButtonDownForegroundStyle
   action: {keyboardType: pinyin}
   swipeUpAction: {shortcutCommand: '#中英切换'}
   swipeDownAction: {shortcutCommand: '#简繁切换'}
@@ -3277,60 +3299,42 @@ cnenButtonForegroundStyle2:
   animation: animation
   <<: *cnen_qj2
 
+cnenButtonDownForegroundStyle:
+  text: 繁
+  <<: *xhzf
+
 cnenButtonHoldSymbolsStyle:
   backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
   foregroundStyle:
-  - cnenButtonHoldSymbolsForegroundStyle0
-  - cnenButtonHoldSymbolsForegroundStyle1
-  - cnenButtonHoldSymbolsForegroundStyle2
-  - cnenButtonHoldSymbolsForegroundStyle3
-  - cnenButtonHoldSymbolsForegroundStyle4
-  - cnenButtonHoldSymbolsForegroundStyle5
-  - cnenButtonHoldSymbolsForegroundStyle6
-  - cnenButtonHoldSymbolsForegroundStyle7
+    - cnenButtonHoldSymbolsForegroundStyleSimp
+    - cnenButtonHoldSymbolsForegroundStyleRime
+    - cnenButtonHoldSymbolsForegroundStyleSwitch
+    - cnenButtonHoldSymbolsForegroundStyleNext
+    
   actions:
-  - {symbol: <}
-  - {symbol: '['}
-  - {symbol: '{'}
-  - {symbol: (}
-  - {symbol: )}
-  - {symbol: '}'}
-  - {symbol: ']'}
-  - {symbol: '>'}
+    - {shortcutCommand: '#简繁切换'} # 在 Rime 内部切换简繁
+    - {shortcutCommand: '#RimeSwitcher'} # Rime 菜单
+    - {shortcutCommand: '#方案切换'} # 在 Rime 内部切换输入方案
+    - 'nextKeyboard' # 切换到 iOS 系统中的下一个输入法
   selectedStyle: alphabeticHoldSymbolsSelectedStyle
-  selectedIndex: 3
+  selectedIndex: 2
 
-cnenButtonHoldSymbolsForegroundStyle0:
-  text: <
-  <<: *iaqp
+cnenButtonHoldSymbolsForegroundStyleSimp:
+  text: 繁简
+  <<: *iaqp_long
 
-cnenButtonHoldSymbolsForegroundStyle1:
-  text: '['
-  <<: *iaqp
+cnenButtonHoldSymbolsForegroundStyleRime:
+  text: 菜单
+  <<: *iaqp_long
 
-cnenButtonHoldSymbolsForegroundStyle2:
-  text: '{'
-  <<: *iaqp
+cnenButtonHoldSymbolsForegroundStyleSwitch:
+  text: 方案
+  <<: *iaqp_long
 
-cnenButtonHoldSymbolsForegroundStyle3:
-  text: (
-  <<: *iaqp
+cnenButtonHoldSymbolsForegroundStyleNext:
+  text: 切换
+  <<: *iaqp_long
 
-cnenButtonHoldSymbolsForegroundStyle4:
-  text: )
-  <<: *iaqp
-
-cnenButtonHoldSymbolsForegroundStyle5:
-  text: '}'
-  <<: *iaqp
-
-cnenButtonHoldSymbolsForegroundStyle6:
-  text: ']'
-  <<: *iaqp
-
-cnenButtonHoldSymbolsForegroundStyle7:
-  text: '>'
-  <<: *iaqp
 
 enterButton:
   size:

@@ -3,8 +3,8 @@ author: BH2WFR
 
 fontFace:
 - name: PingFangSC-Medium
-- url: kafei.ttf
-- url: SymbolsNerdFont-Regular.ttf
+# - url: kafei.ttf
+# - url: SymbolsNerdFont-Regular.ttf
 
 # 中文键盘
 pinyin:
