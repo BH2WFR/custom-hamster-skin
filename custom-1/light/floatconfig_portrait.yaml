@@ -1,0 +1,222 @@
+按键背景: &key_bg
+  type: original
+  insets: {top: 6, left: 5, bottom: 6, right: 5}
+  normalColor: FFFFFF
+  highlightColor: E3E4E9
+  cornerRadius: 9
+  normalLowerEdgeColor: AEAEAE
+  highlightLowerEdgeColor: 26262626
+
+按键上标前景样式: &ub
+  fontSize: 0.88em
+  center:
+    y: 0.38
+  normalColor: A7AEB9
+  highlightColor: FFFFFF
+
+按键文字前景样式: &py
+  fontSize: 0.75em
+  center:
+    y: 1.05
+  normalColor: 070707
+  highlightColor: FFFFFF
+
+keyboard:
+  style: keyboardStyle
+  subviews:
+    - HStack:
+        subviews:
+          - Cell: hamsterButton
+          - Cell: uploadButton
+          - Cell: scriptButton
+          - Cell: fileButton
+    - HStack:
+        subviews:
+          - Cell: skinButton
+          - Cell: soundsButton
+          - Cell: backupButton
+          - Cell: deployButton
+
+floatTargetScale:
+  x: 0.62
+  y: 0.5
+
+keyboardStyle:
+  insets: {top: 8, left: 8, bottom: 8, right: 8}
+  backgroundStyle: keyboardBackgroundStyle
+
+keyboardBackgroundStyle:
+  type: original
+  normalColor: e1e2e8dd
+  cornerRadius: 8
+  borderSize: 0.5
+  normalBorderColor: 22222255
+  normalLowerEdgeColor: 55555555
+
+hamsterButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - hamsterButtonForegroundStyle1
+    - hamsterButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/main}
+
+hamsterButtonForegroundStyle1:
+  animation: animation
+  systemImageName: keyboard
+  <<: *ub
+
+hamsterButtonForegroundStyle2:
+  animation: animation
+  text: 设置
+  <<: *py
+
+uploadButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - uploadButtonForegroundStyle1
+    - uploadButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/uploadInputSchema}
+
+uploadButtonForegroundStyle1:
+  animation: animation
+  systemImageName: wifi
+  <<: *ub
+
+uploadButtonForegroundStyle2:
+  animation: animation
+  text: 上传
+  <<: *py
+
+soundsButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - soundsButtonForegroundStyle1
+    - soundsButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/feedback}
+
+soundsButtonForegroundStyle1:
+  animation: animation
+  systemImageName: speaker.wave.2
+  <<: *ub
+
+soundsButtonForegroundStyle2:
+  animation: animation
+  text: 声音
+  <<: *py
+
+scriptButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - scriptButtonForegroundStyle1
+    - scriptButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/clipboard?type=script}
+
+scriptButtonForegroundStyle1:
+  animation: animation
+  systemImageName: terminal
+  <<: *ub
+
+scriptButtonForegroundStyle2:
+  animation: animation
+  text: 脚本
+  <<: *py
+
+skinButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - skinButtonForegroundStyle1
+    - skinButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/keyboardSkins}
+
+skinButtonForegroundStyle1:
+  animation: animation
+  systemImageName: tshirt
+  <<: *ub
+
+skinButtonForegroundStyle2:
+  animation: animation
+  text: 皮肤
+  <<: *py
+
+fileButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - fileButtonForegroundStyle1
+    - fileButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/finder}
+
+fileButtonForegroundStyle1:
+  animation: animation
+  systemImageName: folder
+  <<: *ub
+
+fileButtonForegroundStyle2:
+  animation: animation
+  text: 文件
+  <<: *py
+
+backupButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - backupButtonForegroundStyle1
+    - backupButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/backup}
+
+backupButtonForegroundStyle1:
+  animation: animation
+  systemImageName: person.icloud
+  <<: *ub
+
+backupButtonForegroundStyle2:
+  animation: animation
+  text: 备份
+  <<: *py
+
+deployButton:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - deployButtonForegroundStyle1
+    - deployButtonForegroundStyle2
+  action: {openURL: hamster://dev.fuxiao.app.hamster/rime?deploy}
+
+deployButtonForegroundStyle1:
+  animation: animation
+  systemImageName: arrow.2.circlepath
+  <<: *ub
+
+deployButtonForegroundStyle2:
+  animation: animation
+  text: 部署
+  <<: *py
+
+ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+animation:
+  - type: bounds
+    duration: 80 # 动画时长，单位毫秒
+    repeatCount: 1
+    fromScale: 1
+    toScale: 0.8
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 0.8
+    toScale: 1

@@ -1,0 +1,202 @@
+按键背景: &key_bg
+  type: original
+  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  normalColor: 66696e
+  highlightColor: 4a4d50
+  cornerRadius: 9
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
+
+按键文字前景样式: &py
+  fontSize: 0.88em
+  center:
+    y: 0.8
+  normalColor: FFFFFF
+  highlightColor: FFFFFF
+
+keyboard:
+  style: keyboardStyle
+  subviews:
+    - HStack:
+        subviews:
+          - Cell: 简繁
+          - Cell: 全半
+          - Cell: 中英标点
+          - Cell: 拼音
+    - HStack:
+        subviews:
+          - Cell: 字集
+          - Cell: 词组
+          - Cell: 表情
+          - Cell: 拆分
+
+floatTargetScale:
+  x: 0.6
+  y: 0.4
+
+keyboardStyle:
+  insets: {top: 8, left: 8, bottom: 8, right: 8}
+  backgroundStyle: keyboardBackgroundStyle
+
+keyboardBackgroundStyle:
+  type: original
+  normalColor: 2D2D2DDD
+  cornerRadius: 9
+  borderSize: 0.5
+  normalBorderColor: 22222255
+  normalLowerEdgeColor: 55555555
+
+简繁:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 简繁ForegroundStyle
+  action: {sendKeys: Control+o}
+
+ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+简繁ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("simplification") ? "繁体" : "简体";
+    }
+  <<: *py
+
+全半:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 全半ForegroundStyle
+  action: {sendKeys: Shift+space}
+
+全半ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("full_shape") ? "全角" : "半角";
+    }
+  <<: *py
+
+中英标点:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 中英标点ForegroundStyle
+  action: {sendKeys: Control+period}
+
+中英标点ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("ascii_punct") ? "英标" : "中标";
+    }
+  <<: *py
+
+拼音:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 拼音ForegroundStyle
+  action: {sendKeys: Control+p}
+
+拼音ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("pinyin") ? "Pīn" : "拼音";
+    }
+  <<: *py
+
+字集:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 字集ForegroundStyle
+  action: {sendKeys: Control+h}
+
+字集ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("charset_filter") ? "常用" : "扩展";
+    }
+  <<: *py
+
+词组:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 词组ForegroundStyle
+  action: {sendKeys: Control+k}
+
+词组ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("single_char_only") ? "单字" : "词组";
+    }
+  <<: *py
+
+表情:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 表情ForegroundStyle
+  action: {sendKeys: Control+i}
+
+表情ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("emoji_cn") ? "表情" : "闭嘴";
+    }
+  <<: *py
+
+拆分:
+  size:
+    height: 1/4
+  backgroundStyle: ButtonBackgroundStyle
+  foregroundStyle:
+    - 拆分ForegroundStyle
+  action: {sendKeys: Shift+Control+j}
+
+拆分ForegroundStyle:
+  animation: animation
+  text: |-
+    // JavaScript: 根据当前选项显示拼音注解等级
+    function getText() {
+      let level = $getRimeOptionState("spelling.lv1") ? "一重" :
+                 $getRimeOptionState("spelling.lv2") ? "二重" :
+                 $getRimeOptionState("spelling.lv3") ? "三重" : "〇重";
+      return level;
+    }
+  <<: *py
+
+animation:
+  - type: bounds
+    duration: 80 # 动画时长，单位毫秒
+    repeatCount: 1
+    fromScale: 1
+    toScale: 0.8
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 0.8
+    toScale: 1

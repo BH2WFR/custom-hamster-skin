@@ -1,0 +1,1511 @@
+预编辑区高度: &preedit_Height 19
+工具栏高度: &toolbar_Height 35
+键盘区高度: &keyboard_Height 161
+
+编码字体大小: &FontSize_preedit 0.88em
+横排序号字体大小: &FontSize_hpxh 1.19em
+横排文字字体大小: &FontSize_hpwz 1.19em
+横排注释字体大小: &FontSize_hpvu 0.81em
+展开序号字体大小: &FontSize_xlxh 1.125em
+展开文字字体大小: &FontSize_xlwz 1.125em
+展开注释字体大小: &FontSize_xlvu 0.75em
+
+编码色: &preedit_textColor FDFDFD
+首选色: &textfirst_color 4c8dff
+次选色: &text_Color FDFDFD
+
+键盘底色: &bg_Color 2D2D2D
+
+按键字符色: &key_textcolor1 FFFFFF
+按键字符高亮色: &key_textcolor1_press FFFFFF
+角标色: &key_textcolor2 A7AEB9
+
+状态栏图标缩放: &toolbarButton_targetScale 0.55
+
+收起图标: &vtltb
+  fontSize: 1em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+
+展开候选列表和详情栏背景色: &zkhxbj 66696e
+
+展开候选功能键字符样式: &zkhx
+  center:
+    y: 0.8
+  fontSize: 0.88em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+
+列表文字样式: &lb
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+  badgeNormalColor: *key_textcolor2
+  fontSize: 0.75em
+
+列表栏高亮背景: &lb_hl
+  type: original
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  normalColor: 383838
+  cornerRadius: 4
+
+详情栏背景: &xql_bg
+  type: original
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  normalColor: *zkhxbj
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
+
+字符键背景: &key_bg
+  type: original
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  normalColor: 66696e
+  highlightColor: ee786c
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: ee786c
+
+功能键背景: &Function_bg
+  type: original
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  normalColor: 4a4d50
+  highlightColor: 4a4d50
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
+
+数字键前景: &szzf
+  center:
+    x: 0.5
+    y: 0.75
+  fontSize: 0.9em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1_press
+
+period键前景: &period_qj
+  center:
+    x: 0.5
+    y: 0.7
+  fontSize: 1.125em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+
+equal前景: &equal_qj
+  center:
+    x: 0.5
+    y: 0.7
+  fontSize: 0.88em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+
+运算符号前景: &yxfh_qj
+  center:
+    x: 0.5
+    y: 0.72
+  fontSize: 0.88em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1_press
+
+功能键前景: &Function_qj
+  center:
+    x: 0.5
+    y: 0.78
+  fontSize: 0.75em
+  normalColor: *key_textcolor1
+  highlightColor: *key_textcolor1
+
+#预编辑区背景
+preeditBackgroundStyle:
+  type: original
+  normalColor: *bg_Color
+
+#工具栏背景
+toolbarBackgroundStyle:
+  type: original
+  normalColor: *bg_Color
+
+#展开后选背景
+verticalCandidateBackgroundStyle:
+  type: original
+  normalColor: *bg_Color
+
+#键盘区背景
+keyboardBackgroundStyle:
+  type: original
+  normalColor: *bg_Color
+
+#按键背景动画
+animation:
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 1
+    toScale: 0.8
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 0.8
+    toScale: 1
+
+preeditHeight: *preedit_Height
+toolbarHeight: *toolbar_Height
+keyboardHeight: *keyboard_Height
+
+preedit:
+  insets: {left: 10, top: 2}
+  backgroundStyle: preeditBackgroundStyle
+  foregroundStyle: preeditForegroundStyle
+
+preeditForegroundStyle:
+  textColor: *preedit_textColor
+  fontSize: *FontSize_preedit
+
+toolbar:
+  backgroundStyle: toolbarBackgroundStyle
+  primaryButtonStyle: primaryButtonStyle
+  secondaryButtonStyle:
+    - toolbarButtonHideStyle
+    - toolbarButton1Style
+    - toolbarButton2Style
+    - toolbarButton3Style
+    - toolbarButton4Style
+    - toolbarButton5Style
+    - toolbarButton6Style
+  horizontalCandidateStyle: horizontalCandidateStyle
+  verticalCandidateStyle: verticalCandidateStyle
+
+primaryButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+    - primaryButtonForegroundStyle
+  action: {floatKeyboardType: floatconfig}
+
+primaryButtonForegroundStyle:
+  normalImage:
+    file: 设置
+    image: IMG1
+  highlightImage:
+    file: 设置
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButtonHideStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+    - toolbarButtonHideForegroundStyle
+  action: dismissKeyboard
+
+toolbarButtonHideForegroundStyle:
+  normalImage:
+    file: 收起
+    image: IMG1
+  highlightImage:
+    file: 收起
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton1Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton1ForegroundStyle
+  action: {shortcutCommand: '#showPasteboardView'}
+
+toolbarButton1ForegroundStyle:
+  normalImage:
+    file: 剪贴
+    image: IMG1
+  highlightImage:
+    file: 剪贴
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton2Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton2ForegroundStyle
+  action: {shortcutCommand: '#showPhraseView'}
+
+toolbarButton2ForegroundStyle:
+  normalImage:
+    file: 短语
+    image: IMG1
+  highlightImage:
+    file: 短语
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton3Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton3ForegroundStyle
+  action: {shortcutCommand: '#RimeSwitcher'}
+
+toolbarButton3ForegroundStyle:
+  normalImage:
+    file: 开关
+    image: IMG1
+  highlightImage:
+    file: 开关
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton4Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton4ForegroundStyle
+  action: {floatKeyboardType: floatsearch}
+
+toolbarButton4ForegroundStyle:
+  normalImage:
+    file: 搜索
+    image: IMG1
+  highlightImage:
+    file: 搜索
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton5Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton5ForegroundStyle
+  action: {runTranslateScript: 智谱翻译}
+
+toolbarButton5ForegroundStyle:
+  normalImage:
+    file: 翻译
+    image: IMG1
+  highlightImage:
+    file: 翻译
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+toolbarButton6Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle:
+  - toolbarButton6ForegroundStyle
+  action: {openURL: hamster://dev.fuxiao.app.hamster/keyboardSkins}
+
+toolbarButton6ForegroundStyle:
+  normalImage:
+    file: 皮肤
+    image: IMG1
+  highlightImage:
+    file: 皮肤
+    image: IMG1
+  targetScale: *toolbarButton_targetScale
+
+horizontalCandidateStyle:
+  insets: {left: 5, top: 5, bottom: 5}
+  candidateStateButtonStyle: candidateStateButtonStyle
+  highlightBackgroundColor: 00000000
+  preferredBackgroundColor: 00000000
+  preferredIndexColor: *textfirst_color
+  preferredTextColor: *textfirst_color
+  preferredCommentColor: *textfirst_color
+  indexColor: *text_Color
+  textColor: *text_Color
+  commentColor: *text_Color
+  indexFontSize: *FontSize_hpxh
+  textFontSize: *FontSize_hpwz
+  commentFontSize: *FontSize_hpvu
+  itemSpacing: 5
+
+candidateStateButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: candidateStateButtonForegroundStyle
+
+candidateStateButtonForegroundStyle:
+  systemImageName: "chevron.down"
+  <<: *vtltb
+
+verticalCandidateStyle:
+  insets: {top: 3, bottom: 3, left: 4, right: 4}
+  bottomRowHeight: 43
+  backgroundStyle: verticalCandidateBackgroundStyle
+  candidateStyle: verticalCandidateOfCandidateStyle
+  pageUpButtonStyle: verticalCandidatePageUpButtonStyle
+  pageDownButtonStyle: verticalCandidatePageDownButtonStyle
+  returnButtonStyle: verticalCandidateReturnButtonStyle
+  backspaceButtonStyle: verticalCandidateBackspaceButtonStyle
+
+verticalCandidateOfCandidateStyle:
+  insets: {top: 3, bottom: 6, left: 8, right: 8}
+  cornerRadius: 6
+  backgroundColor: *zkhxbj
+  separatorColor: 00000000
+  highlightBackgroundColor: 00000000
+  preferredBackgroundColor: 00000000
+  preferredIndexColor: *textfirst_color
+  preferredTextColor: *textfirst_color
+  preferredCommentColor: *textfirst_color
+  indexColor: *text_Color
+  textColor: *text_Color
+  commentColor: *text_Color
+  indexFontSize: *FontSize_xlxh
+  textFontSize: *FontSize_xlwz
+  commentFontSize: *FontSize_xlvu
+
+verticalCandidatePageUpButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
+
+verticalCandidateButtonBackgroundStyle:
+  insets: { top: 3, left: 8, bottom: 3, right: 8 }
+  <<: *Function_bg
+
+verticalCandidatePageUpButtonForegroundStyle:
+  text: 
+  <<: *zkhx
+
+verticalCandidatePageDownButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
+
+verticalCandidatePageDownButtonForegroundStyle:
+  text: 
+  <<: *zkhx
+
+verticalCandidateReturnButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidateReturnButtonForegroundStyle
+
+verticalCandidateReturnButtonForegroundStyle:
+  text: 
+  <<: *zkhx
+
+verticalCandidateBackspaceButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle:
+    - verticalCandidateBackspaceButtonForegroundStyle
+
+verticalCandidateBackspaceButtonForegroundStyle:
+  text: 
+  <<: *zkhx
+
+keyboard:
+  style: keyboardStyle
+  subviews:
+    - VStack:
+        style: columnStyle1
+        subviews:
+          - HStack:
+              style: HStackStyle1
+              subviews:
+                - Cell: categoryCollection
+                - Cell: descriptionCollection
+          - HStack:
+              style: HStackStyle2
+              subviews:
+                - Cell: returnButton1
+                - Cell: pageUpButton
+                - Cell: pageDownButton
+                - Cell: lockButton
+                - Cell: backspaceButton1
+    - VStack:
+        style: columnStyle2
+        subviews:
+          - HStack:
+              style: HStackStyle3
+              subviews:
+                - Cell: 加
+                - Cell: 1Button
+                - Cell: 2Button
+                - Cell: 3Button
+          - HStack:
+              style: HStackStyle3
+              subviews:
+                - Cell: 减
+                - Cell: 4Button
+                - Cell: 5Button
+                - Cell: 6Button
+          - HStack:
+              style: HStackStyle3
+              subviews:
+                - Cell: 乘
+                - Cell: 7Button
+                - Cell: 8Button
+                - Cell: 9Button
+          - HStack:
+              style: HStackStyle2
+              subviews:
+                - Cell: 除
+                - Cell: equalButton
+                - Cell: 0Button
+                - Cell: periodButton
+    - VStack:
+        style: columnStyle3
+        subviews:
+          - HStack:
+              style: HStackStyle1
+              subviews:
+                - Cell: descriptionCollection
+                - Cell: categoryCollection
+          - HStack:
+              style: HStackStyle2
+              subviews:
+                - Cell: returnButton2
+                - Cell: pageUpButton
+                - Cell: pageDownButton
+                - Cell: lockButton
+                - Cell: backspaceButton2
+
+columnStyle1:
+  size:
+    width: 2/5
+
+columnStyle2:
+  size:
+    width: 1/5
+
+columnStyle3:
+  size:
+    width: 2/5
+
+VStackStyle1:
+  size:
+    width: 1/4
+
+VStackStyle2:
+  size:
+    width: 1/4
+
+HStackStyle1:
+HStackStyle2:
+  size:
+    height: 2.2/10
+HStackStyle3:
+
+keyboardStyle:
+  insets: {top: 1}
+  backgroundStyle: keyboardBackgroundStyle
+
+#类别页
+categoryCollection:
+  size:
+    width: 1/5
+  backgroundStyle: categoryCollectionButtonBackgroundStyle
+  type: classifiedSymbols
+  dataSource: category
+  cellStyle: collectionCellStyle
+
+categoryCollectionButtonBackgroundStyle:
+  <<: *Function_bg
+
+collectionCellStyle:
+  backgroundStyle: collectionCellBackgroundStyle
+  foregroundStyle: collectionCellForegroundStyle
+
+collectionCellBackgroundStyle:
+  <<: *lb_hl
+
+collectionCellForegroundStyle:
+  <<: *lb
+
+#详情页
+descriptionCollection:
+  size:
+    width: 4/5
+  backgroundStyle: descriptionCollectionButtonBackgroundStyle
+  type: subClassifiedSymbols
+  cellStyle: descriptionCollectionStyle
+
+descriptionCollectionButtonBackgroundStyle:
+  <<: *xql_bg
+
+descriptionCollectionStyle:
+  backgroundStyle: collectionCellBackgroundStyle
+  foregroundStyle: descriptionCollectionForegroundStyle
+
+descriptionCollectionForegroundStyle:
+  <<: *lb
+
+returnButton1:
+  size:
+    width: 1/5
+  backgroundStyle: returnButtonBackgroundStyle
+  foregroundStyle: returnButtonForegroundStyle
+  action: returnPrimaryKeyboard
+
+returnButton2:
+  backgroundStyle: returnButtonBackgroundStyle
+  foregroundStyle: returnButtonForegroundStyle
+  action: returnPrimaryKeyboard
+
+returnButtonBackgroundStyle:
+  animation: animation
+  <<: *Function_bg
+
+returnButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+pageUpButton:
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: pageUpButtonForegroundStyle
+  action: pageUp
+
+systemButtonBackgroundStyle:
+  animation: animation
+  <<: *Function_bg
+
+pageUpButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+pageDownButton:
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: pageDownButtonForegroundStyle
+  action: pageDown
+
+pageDownButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+lockButton:
+  backgroundStyle: lockButtonBackgroundStyle
+  foregroundStyle: |-
+    // JavaScript
+    function getText() {
+      return $getSymbolicKeyboardLockState() ? "lockButtonForegroundStyle" : "unlockButtonForegroundStyle";
+    }
+  action: symbolicKeyboardLockStateToggle
+
+lockButtonBackgroundStyle:
+  animation: animation
+  <<: *Function_bg
+
+lockButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+unlockButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+backspaceButton1:
+  backgroundStyle: backspaceButtonBackgroundStyle
+  foregroundStyle: backspaceButtonForegroundStyle
+  action: backspace
+  repeatAction: backspace
+
+backspaceButton2:
+  size:
+    width: 1/5
+  backgroundStyle: backspaceButtonBackgroundStyle
+  foregroundStyle: backspaceButtonForegroundStyle
+  action: backspace
+  repeatAction: backspace
+
+backspaceButtonBackgroundStyle:
+  animation: animation
+  <<: *Function_bg
+
+backspaceButtonForegroundStyle:
+  animation: animation
+  text: 
+  <<: *Function_qj
+
+1Button:
+  backgroundStyle: 1ButtonBackgroundStyle
+  foregroundStyle:
+    - 1ButtonForegroundStyle
+  action: {character: 1}
+
+1ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+1ButtonForegroundStyle:
+  animation: animation
+  text: '1'
+  <<: *szzf
+
+4Button:
+  backgroundStyle: 4ButtonBackgroundStyle
+  foregroundStyle:
+    - 4ButtonForegroundStyle
+  action: {character: 4}
+
+4ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+4ButtonForegroundStyle:
+  animation: animation
+  text: '4'
+  <<: *szzf
+
+7Button:
+  backgroundStyle: 7ButtonBackgroundStyle
+  foregroundStyle:
+    - 7ButtonForegroundStyle
+  action: {character: 7}
+
+7ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+7ButtonForegroundStyle:
+  animation: animation
+  text: '7'
+  <<: *szzf
+
+2Button:
+  backgroundStyle: 2ButtonBackgroundStyle
+  foregroundStyle:
+    - 2ButtonForegroundStyle
+  action: {character: 2}
+
+2ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+2ButtonForegroundStyle:
+  animation: animation
+  text: '2'
+  <<: *szzf
+
+5Button:
+  backgroundStyle: 5ButtonBackgroundStyle
+  foregroundStyle:
+    - 5ButtonForegroundStyle
+  action: {character: 5}
+
+5ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+5ButtonForegroundStyle:
+  animation: animation
+  text: '5'
+  <<: *szzf
+
+8Button:
+  backgroundStyle: 8ButtonBackgroundStyle
+  foregroundStyle:
+    - 8ButtonForegroundStyle
+  action: {character: 8}
+
+8ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+8ButtonForegroundStyle:
+  animation: animation
+  text: '8'
+  <<: *szzf
+
+0Button:
+  backgroundStyle: 0ButtonBackgroundStyle
+  foregroundStyle:
+    - 0ButtonForegroundStyle
+  action: {character: 0}
+
+0ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+0ButtonForegroundStyle:
+  animation: animation
+  text: '0'
+  <<: *szzf
+
+3Button:
+  backgroundStyle: 3ButtonBackgroundStyle
+  foregroundStyle:
+    - 3ButtonForegroundStyle
+  action: {character: 3}
+
+3ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+3ButtonForegroundStyle:
+  animation: animation
+  text: '3'
+  <<: *szzf
+
+6Button:
+  backgroundStyle: 6ButtonBackgroundStyle
+  foregroundStyle:
+    - 6ButtonForegroundStyle
+  action: {character: 6}
+
+6ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+6ButtonForegroundStyle:
+  animation: animation
+  text: '6'
+  <<: *szzf
+
+9Button:
+  backgroundStyle: 9ButtonBackgroundStyle
+  foregroundStyle:
+    - 9ButtonForegroundStyle
+  action: {character: 9}
+
+9ButtonBackgroundStyle:
+  animation: animation
+  <<: *key_bg
+
+9ButtonForegroundStyle:
+  animation: animation
+  text: '9'
+  <<: *szzf
+
+加:
+  backgroundStyle: 加BackgroundStyle
+  foregroundStyle:
+    - 加ForegroundStyle
+  action: {character: '+'}
+
+加BackgroundStyle:
+  <<: *key_bg
+
+加ForegroundStyle:
+  animation: animation
+  text: '+'
+  <<: *yxfh_qj
+
+减:
+  backgroundStyle: 减BackgroundStyle
+  foregroundStyle:
+    - 减ForegroundStyle
+  action: {character: '-'}
+
+减BackgroundStyle:
+  <<: *key_bg
+
+减ForegroundStyle:
+  animation: animation
+  text: '-'
+  <<: *yxfh_qj
+
+乘:
+  backgroundStyle: 乘BackgroundStyle
+  foregroundStyle:
+    - 乘ForegroundStyle
+  action: {character: '*'}
+
+乘BackgroundStyle:
+  <<: *key_bg
+
+乘ForegroundStyle:
+  animation: animation
+  text: '×'
+  <<: *yxfh_qj
+
+除:
+  backgroundStyle: 除BackgroundStyle
+  foregroundStyle:
+    - 除ForegroundStyle
+  action: {character: '/'}
+
+除BackgroundStyle:
+  <<: *key_bg
+
+除ForegroundStyle:
+  animation: animation
+  text: '÷'
+  <<: *yxfh_qj
+
+periodButton:
+  backgroundStyle: periodButtonBackgroundStyle
+  foregroundStyle: periodButtonForegroundStyle
+  action: {character: .}
+
+periodButtonBackgroundStyle:
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  animation: animation
+  <<: *Function_bg
+
+periodButtonForegroundStyle:
+  animation: animation
+  text: ·
+  <<: *period_qj
+
+equalButton:
+  size:
+    height: 1/4
+  backgroundStyle: equalButtonBackgroundStyle
+  foregroundStyle: equalButtonForegroundStyle
+  action: {character: '='}
+
+equalButtonBackgroundStyle:
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
+  animation: animation
+  <<: *Function_bg
+
+equalButtonForegroundStyle:
+  animation: animation
+  text: '='
+  <<: *equal_qj
+
+dataSource:
+  category: [常用, 中文, 英文, 数学, 角标, 序号, 音标, 箭头, 特殊, 拼音, 注音, 竖标, 部首, 拉丁, 制表, 字体]
+  常用:
+  - “”
+  - ‘’
+  - 《》
+  - 【】
+  - ［］
+  - '"'
+  - "'"
+  - '{}'
+  - '[]'
+  - <>
+  - 、
+  - ……
+  - ·
+  - www.
+  - .com
+  - \
+  - ^
+  - '{'
+  - '}'
+  - $
+  中文:
+  - 《》
+  - ‘’
+  - 〈〉
+  - ·
+  - '-'
+  - ˉ
+  - ˇ
+  - ¨
+  - 々
+  - ‖
+  - ∶
+  - ＂
+  - ＇
+  - ｀
+  - ｜
+  - 〃
+  - 〔〕
+  - 「」
+  - 『』
+  - ．
+  - 〖〗
+  - 【】
+  - ［］
+  - ｛｝
+  - ：
+  - ；
+  - （）
+  - ——
+  - “”
+  - ……
+  - ～
+  - 、
+  - ？
+  - ！
+  - ，
+  - 。
+  英文:
+  - ','
+  - .
+  - '?'
+  - '!'
+  - ':'
+  - /
+  - '@'
+  - .
+  - .
+  - .
+  - '"'
+  - ;
+  - "'"
+  - '~'
+  - ()
+  - <>
+  - ()
+  - '[]'
+  - '{}'
+  - <>
+  - '*'
+  - '&'
+  - '['
+  - ']'
+  - '"'
+  - '`'
+  - '#'
+  - '%'
+  - ^
+  - _
+  - +
+  - '-'
+  - '='
+  - '{'
+  - '}'
+  - '|'
+  - ¥
+  - £
+  - €
+  - ﹉
+  - –
+  - .
+  - .
+  - ´
+  - ＂
+  - ＇
+  - ¢
+  - ฿
+  制表: [┝, ┞, ┟, ┠, ┡, ┢, ═, ╞, ╟, ╡, ╢, ╪, ┭, ┮, ┯, ┰, ┱, ┲, ║, ╤, ╥, ╧, ╨, ╫, ┥,
+    ┦, ┧, ┨, ┩, ┪, ┽, ┾, ┿, ╀, ╁, ╂, ┵, ┶, ┷, ┸, ┹, ┺, ╄, ╅, ╆, ╇, ╈, ╉, ┈, ┉, ┊,
+    ┋, ╃, ╊, ┍, ┑, ┕, ┙, ┎, ┒, ┖, ┚, ╒, ╕, ╘, ╛, ╓, ╖, ╙, ╜, ┄, ┅, ┆, ┇, ┌, ┬, ┐,
+    ├, ┼, ┤, └, ┴, ┘, ┏, ┳, ┓, ┣, ╋, ┫, ┗, ┻, ┛, ╔, ╦, ╗, ╠, ╬, ╣, ╚, ╩, ╝]
+  序号: [①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨, ⑩, ❶, ❷, ❸, ❹, ❺, ❻, ❼, ❽, ❾, ❿, ⓵, ⓶, ⓷, ⓸, ⓹,
+    ⓺, ⓻, ⓼, ⓽, ⓾, ⒈, ⒉, ⒊, ⒋, ⒌, ⒍, ⒎, ⒏, ⒐, ⒑, ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽, ㈠,
+    ㈡, ㈢, ㈣, ㈤, ㈥, ㈦, ㈧, ㈨, ㈩, 壹, 贰, 叁, 肆, 伍, 陆, 柒, 捌, 玖, 拾, 佰, 仟, 萬, 億, ⅰ, ⅱ, ⅲ,
+    ⅳ, ⅴ, ⅵ, ⅶ, ⅷ, ⅸ, ⅹ, Ⅰ, Ⅱ, Ⅲ, Ⅳ, Ⅴ, Ⅵ, Ⅶ, Ⅷ, Ⅸ, Ⅹ, Ⅺ, Ⅻ]
+  拉丁: [À, Á, Â, Ã, Ä, Å, Ā, Æ, Ç, È, É, Ê, Ë, Ē, Ì, Í, Î, Ï, Ī, Ð, Ñ, Ò, Ó, Ô, Õ,
+    Ö, Ō, Ø, Œ, Ù, Ú, Û, Ü, Ū, Ý, Ÿ, Þ, Š, à, á, â, ã, ä, å, æ, ç, è, é, ê, ë, ē,
+    ì, í, î, ǐ, ï, ī, ð, ñ, ò, ó, õ, ǒ, ô, ö, ō, ø, œ, ù, ú, ǔ, û, ü, ū, ý, þ, š,
+    ÿ]
+  拼音: [ā, á, ǎ, à, ō, ó, ǒ, ò, ē, é, ě, è, ī, í, ǐ, ì, ū, ú, ǔ, ù, ǖ, ǘ, ǚ, ǜ, ü]
+  数学: ['=', +, '-', ·, /, ×, ÷, ^, ＞, ＜, ≥, ≤, ≮, ≯, ≡, ≠, ≈, ≒, ±, √, ³, √, π, '%',
+    ‰, ％, ℅, ½, ⅓, ⅔, ¼, ¾, ∶, ∵, ∴, ∷, ㏒, ㏑, ∫, ∬, ∭, ∮, ∯, ∰, ∂, ∑, ∏, ∈, ∉, ∅,
+    ⊂, ⊃, ⊆, ⊇, ⊄, ⊅, ⊊, ⊈, ⫋, ⫌, ∀, ∃, ∩, ∪, ∧, ∨, ⊙, ⊕, ∥, ⊥, ⌒, ∟, ∠, △, ⊿, ∝,
+    ∽, ∞, ≌, °, ℃, ℉, ㎎, ㎏, μ, m, ㎜, ㎝, ㎞, ㎡, m, ³, ㏄, ㏕]
+  注音: [ㄅ, ㄆ, ㄇ, ㄈ, ㄉ, ㄊ, ㄋ, ㄌ, ㄍ, ㄎ, ㄏ, ㄐ, ㄑ, ㄒ, ㄓ, ㄔ, ㄕ, ㄖ, ㄗ, ㄘ, ㄙ, ㄧ, ㄨ, ㄩ, ㄚ,
+    ㄛ, ㄜ, ㄝ, ㄞ, ㄟ, ㄠ, ㄡ, ㄢ, ㄣ, ㄤ, ㄥ, ㄦ]
+  特殊: [△, ▽, ○, ◇, □, ☆, ▷, ◁, ♤, ♡, ♢, ♧, ▲, ▼, ●, ◆, ■, ★, ▶, ◀, ♠, ♥, ♦, ♣, 囍,
+    ☼, ☽, ☺, ◐, ☑, √, ✔, ㏂, ☀, ☾, ♂, ☹, ◑, ×, ✕, ✘, ☚, ☛, ㏘, ▪, •, ‥, …, ▁, ▂, ▃,
+    ▄, ▅, ▆, ▇, █, ∷, ※, ░, ▒, ▓, ▏, ▎, ▍, ▌, ▋, ▊, ▉, ♩, ♪, ♫, ♬, §, 〼, ◎, ¤, ۞,
+    ℗, ®, ©, ♭, ♯, ♮, ‖, ¶, 卍, 卐, ▬, 〓, ℡, ™, ㏇, ☌, ☍, ☋, ☊, ㉿, ◮, ◪, ◔, ◕, '@', ㈱,
+    №, ♈, ♉, ♊, ♋, ♌, ♎, ♏, ♐, ♑, ♓, ♒, ♍, ☰, ☱, ☲, ☳, ☯, ☴, ☵, ☶, ☷, '*', ＊, ✲, ❈,
+    ❉, ✿, ❀, ❃, ❁, ☸, ✖, ✚, ✪, ❤, ღ, ❦, ❧, ₪, ✎, ✍, 📝, ✌, ☁, ☂, ☃, ☄, ♨, ☇, ☈, ☡,
+    ➷, ⊹, ✉, ☏, ☢, ☣, ☠, ☮, 〄, ➹, ☩, ஐ, ☎, ✈, 〠, ۩, ✙, ✟, ☤, ☥, ☦, ☧, ☨, ☫, ☬, ♟,
+    ♙, ♜, ♖, ♞, ♘, ♝, ♗, ♛, ♕, ♚, ♔, ✄, ✁, ✃, ❥, ✪, ☒, ❅, ✣, ✰, ⚀, ⚁, ⚂, ⚃, ⚄, ⚅]
+  竖标: [︐, ︑, ︒, ︓, ︔, ︕, ︖, ︵, ︶, ︷, ︸, ︹, ︺, ︿, ﹀, ︽, ︾, ﹁, ﹂, ﹃, ﹄, ︻, ︼, ︗, ︘,
+    _, ¯, ＿, ￣, ﹏, ﹋, ﹍, ﹉, ﹎, ﹊, ¦, ︴, ¡, ¿, ^, ˇ, ¨, ˊ]
+  箭头: [→, ←, ↑, ↓, ↖, ↗, ↙, ↘, ↔, ↕, ⇞, ⇟, ⇆, ⇅, ⇔, ⇕, ↰, ↱, ↲, ↴, ↶, ↷, ↺, ↻, ↜,
+    ↝, ↞, ↟, ↠, ↡, ➺, ➻, ➼, ➳, ➽, ➸, ➹, ➷, ⇎, ➠, ↣, ☞, ☜, ☟, ⇦, ⇧, ⇨, ⇩, ⇪, ➩, ➪,
+    ➫, ➬, ➯, ➱, ➮, ➭, ➠, ➡, ➢, ➣, ➤, ➥, ➦, ➧, ➨]
+  角标: [º, ⁰, ¹, ², ³, ⁴, ⁵, ⁶, ⁷, ⁸, ⁹, ⁱ, ⁺, ⁻, ⁼, ⁽, ⁾, ˣ, ʸ, ⁿ, ᶻ, ˢ, ₀, ₁, ₂,
+    ₃, ₄, ₅, ₆, ₇, ₈, ₉, ₊, ₋, ₌, ₍, ₎, ₐ, ₑ, ₒ, ₓ, ᵧ, ₔ, ᴬ, ᴮ, ᶜ, ᴰ, ᴱ, ᶠ, ᴳ, ᴴ,
+    ᴵ, ᴶ, ᴷ, ᴸ, ᴹ, ᴺ, ᴼ, ᴾ, ᶞ, ᴿ, ᵀ, ᵁ, ᵛ, ᵂ, ᵃ, ᵇ, ᶜ, ᵈ, ᵉ, ᶠ, ᵍ, ʰ, ⁱ, ʲ, ᵏ, ˡ,
+    ᵐ, ⁿ, ᵒ, ᵖ, ʳ, ˢ, ᵗ, ᵘ, ᵛ, ʷ, ˣ, ʸ, ᶻ]
+  部首: [丨, 亅, 丿, 乛, 一, 乙, 乚, 丶, 八, 勹, 匕, 冫, 卜, 厂, 刀, 刂, 儿, 二, 匚, 阝, 丷, 几, 卩, 冂, 力,
+    冖, 凵, 人, 亻, 入, 十, 厶, 亠, 匸, 讠, 廴, 又, 艹, 屮, 彳, 巛, 川, 辶, 寸, 大, 飞, 干, 工, 弓, 廾, 广,
+    己, 彐, 彑, 巾, 口, 马, 门, 宀, 女, 犭, 山, 彡, 尸, 饣, 士, 扌, 氵, 纟, 巳, 土, 囗, 兀, 夕, 小, 忄, 幺,
+    弋, 尢, 夂, 子, 贝, 比, 灬, 长, 车, 歹, 斗, 厄, 方, 风, 父, 戈, 卝, 户, 火, 旡, 见, 斤, 耂, 毛, 木, 肀,
+    牛, 牜, 爿, 片, 攴, 攵, 气, 欠, 犬, 日, 氏, 礻, 手, 殳, 水, 瓦, 尣, 王, 韦, 文, 毋, 心, 牙, 爻, 曰, 月,
+    爫, 支, 止, 爪, 白, 癶, 歺, 甘, 瓜, 禾, 钅, 立, 龙, 矛, 皿, 母, 目, 疒, 鸟, 皮, 生, 石, 矢, 示, 罒, 田,
+    玄, 穴, 疋, 业, 衤, 用, 玉, 耒, 艸, 臣, 虫, 而, 耳, 缶, 艮, 虍, 臼, 米, 齐, 肉, 色, 舌, 覀, 页, 先, 行,
+    血, 羊, 聿, 至, 舟, 衣, 竹, 自, 羽, 糸, 糹, 貝, 采, 镸, 車, 辰, 赤, 辵, 豆, 谷, 見, 角, 克, 里, 卤, 麦,
+    身, 豕, 辛, 言, 邑, 酉, 豸, 走, 足, 青, 靑, 雨, 齿, 長, 非, 阜, 金, 釒, 隶, 門, 靣, 飠, 鱼, 隹, 風, 革,
+    骨, 鬼, 韭, 面, 首, 韋, 香, 頁, 音, 髟, 鬯, 鬥, 高, 鬲, 馬, 黄, 鹵, 鹿, 麻, 麥, 鳥, 魚, 鼎, 黑, 黽, 黍,
+    黹, 鼓, 鼠, 鼻, 齊, 齒, 龍, 龠]
+  音标: [ɑː, 'ɔ:', ɜː, 'i:', 'u:', ʌ, ɒ, ə, ɪ, ʊ, e, æ, eɪ, aɪ, ɔɪ, ɪə, eə, ʊə, əʊ,
+    aʊ, p, t, k, f, θ, s, b, d, g, v, ð, z, ʃ, h, ts, tʃ, j, tr, ʒ, r, dz, dʒ, dr,
+    w, m, n, ŋ, l]
+  字体:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+

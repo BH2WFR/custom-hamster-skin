@@ -1,0 +1,211 @@
+按键底图样式: &ub
+  contentMode: scaleAspectFit
+  targetScale: 0.75
+
+keyboard:
+  style: keyboardStyle
+  subviews:
+  - HStack:
+      subviews:
+      - Cell: 1_Button
+      - Cell: 2_Button
+      - Cell: 3_Button
+      - Cell: 4_Button
+      - Cell: 5_Button
+  - HStack:
+      subviews:
+      - Cell: 6_Button
+      - Cell: 7_Button
+      - Cell: 8_Button
+      - Cell: 9_Button
+      - Cell: 10_Button
+
+floatTargetScale:
+  x: 0.5
+  y: 0.7
+
+keyboardStyle:
+  insets: {top: 8, left: 8, bottom: 8, right: 8}
+  backgroundStyle: keyboardBackgroundStyle
+
+keyboardBackgroundStyle:
+  type: original
+  normalColor: 2D2D2DDD
+  cornerRadius: 8
+  borderSize: 0.5
+  normalBorderColor: 22222255
+  normalLowerEdgeColor: 55555555
+
+1_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 1_ButtonBackgroundStyle
+  action: {openURL: https://cn.bing.com/search?q=#pasteboardContent}
+
+1_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: bing
+    image: IMG1
+  highlightImage:
+    file: bing
+    image: IMG1
+  <<: *ub
+
+2_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 2_ButtonBackgroundStyle
+  action: {openURL: https://www.baidu.com/s?wd=#pasteboardContent}
+
+2_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: bd
+    image: IMG1
+  highlightImage:
+    file: bd
+    image: IMG1
+  <<: *ub
+
+3_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 3_ButtonBackgroundStyle
+  action: {openURL: taobao://s.taobao.com?q=#pasteboardContent}
+
+3_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: tb
+    image: IMG1
+  highlightImage:
+    file: tb
+    image: IMG1
+  <<: *ub
+
+4_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 4_ButtonBackgroundStyle
+  action: {openURL: 'openapp.jdmobile://virtual?params={"des":"productList", "keyWord":"#pasteboardContent",
+      "from":"search", "category":"jump"}'}
+
+4_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: jd
+    image: IMG1
+  highlightImage:
+    file: jd
+    image: IMG1
+  <<: *ub
+
+5_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 5_ButtonBackgroundStyle
+  action: {openURL: snssdk1128://search?keyword=#pasteboardContent}
+
+5_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: dy
+    image: IMG1
+  highlightImage:
+    file: dy
+    image: IMG1
+  <<: *ub
+
+6_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 6_ButtonBackgroundStyle
+  action: {openURL: xhsdiscover://search/result?keyword=#pasteboardContent}
+
+6_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: xhs
+    image: IMG1
+  highlightImage:
+    file: xhs
+    image: IMG1
+  <<: *ub
+
+7_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 7_ButtonBackgroundStyle
+  action: {openURL: zhihu://search?q=#pasteboardContent}
+
+7_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: zh
+    image: IMG1
+  highlightImage:
+    file: zh
+    image: IMG1
+  <<: *ub
+
+8_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 8_ButtonBackgroundStyle
+  action: {openURL: bilibili://search?keyword=#pasteboardContent}
+
+8_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: bili
+    image: IMG1
+  highlightImage:
+    file: bili
+    image: IMG1
+  <<: *ub
+
+9_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 9_ButtonBackgroundStyle
+  action: {openURL: iosamap://poi?sourceApplication=applicationName&name=#pasteboardContent}
+
+9_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: gd
+    image: IMG1
+  highlightImage:
+    file: gd
+    image: IMG1
+  <<: *ub
+
+10_Button:
+  size:
+    height: 1/4
+  backgroundStyle: 10_ButtonBackgroundStyle
+  action: {openURL: baidumap://map/place/search?query=#pasteboardContent}
+
+10_ButtonBackgroundStyle:
+  animation: animation
+  normalImage:
+    file: bddt
+    image: IMG1
+  highlightImage:
+    file: bddt
+    image: IMG1
+  <<: *ub
+
+# 按键背景动画
+animation:
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 1
+    toScale: 0.8
+  - type: bounds
+    duration: 80
+    repeatCount: 1
+    fromScale: 0.8
+    toScale: 1

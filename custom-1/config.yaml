@@ -1,0 +1,75 @@
+name: CUSTOM-1
+author: BH2WFR
+
+fontFace:
+- name: PingFangSC-Medium
+- url: kafei.ttf
+- url: SymbolsNerdFont-Regular.ttf
+
+# 中文键盘
+pinyin:
+  iPhone:
+    portrait: pinyin_26_portrait
+    landscape: pinyin_26_landscape
+  iPad:
+    portrait: pinyin_26_portrait
+    landscape: pinyin_26_landscape
+    floating: pinyin_26_portrait
+
+# 英文键盘
+alphabetic:
+  iPhone:
+    portrait: alphabetic_26_portrait
+    landscape: alphabetic_26_landscape
+  iPad:
+    portrait: alphabetic_26_portrait
+    landscape: alphabetic_26_landscape
+    floating: alphabetic_26_portrait
+
+# 数字键盘
+numeric:
+  iPhone:
+    portrait: numeric_9_portrait
+    landscape: pinyin_26_landscape
+  iPad:
+    portrait: numeric_9_portrait
+    landscape: pinyin_26_landscape
+    floating: numeric_9_portrait
+
+# 符号键盘
+symbolic:
+  iPhone:
+    portrait: symbolic_portrait
+    landscape: symbolic_landscape
+  iPad:
+    portrait: symbolic_portrait
+    landscape: symbolic_landscape
+    floating: symbolic_portrait
+
+# 搜索浮动键盘
+floatsearch:
+  iPhone:
+    portrait: floatsearch_portrait
+    landscape: floatsearch_landscape
+
+# 设置浮动键盘
+floatconfig:
+  iPhone:
+    portrait: floatconfig_portrait
+    landscape: floatconfig_landscape
+
+# switch键盘
+floatswitch:
+  iPhone:
+    portrait: floatswitch_portrait
+    landscape: floatswitch_landscape
+
+#表情键盘
+emoji:
+  iPhone:
+    portrait: emoji_portrait
+    landscape: emoji_landscape
+  iPad:
+    portrait: emoji_portrait
+    landscape: emoji_landscape
+    floating: emoji_portrait
