@@ -31,7 +31,7 @@
 
 展开候选功能键字符样式: &zkhx
   center:
-    y: 0.8
+    y: 0.5
   fontSize: 0.88em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -52,7 +52,7 @@
   type: original
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: *zkhxbj
-  cornerRadius: 6
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -61,7 +61,7 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 66696e
   highlightColor: ee786c
-  cornerRadius: 6
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: ee786c
 
@@ -70,7 +70,7 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 4a4d50
   highlightColor: 4a4d50
-  cornerRadius: 6
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -295,7 +295,7 @@ toolbarButton6ForegroundStyle:
   targetScale: *toolbarButton_targetScale
 
 horizontalCandidateStyle:
-  insets: {left: 5, top: 5, bottom: 5}
+  insets: {left: 3, top: 3, bottom: 3}
   candidateStateButtonStyle: candidateStateButtonStyle
   highlightBackgroundColor: 00000000
   preferredBackgroundColor: 00000000
@@ -320,7 +320,7 @@ candidateStateButtonForegroundStyle:
 
 verticalCandidateStyle:
   insets: {top: 3, bottom: 3, left: 4, right: 4}
-  bottomRowHeight: 43
+  bottomRowHeight: 40
   backgroundStyle: verticalCandidateBackgroundStyle
   candidateStyle: verticalCandidateOfCandidateStyle
   pageUpButtonStyle: verticalCandidatePageUpButtonStyle
@@ -354,7 +354,7 @@ verticalCandidateButtonBackgroundStyle:
   <<: *Function_bg
 
 verticalCandidatePageUpButtonForegroundStyle:
-  text: 
+  systemImageName: chevron.up.circle.fill
   <<: *zkhx
 
 verticalCandidatePageDownButtonStyle:
@@ -362,7 +362,7 @@ verticalCandidatePageDownButtonStyle:
   foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
 
 verticalCandidatePageDownButtonForegroundStyle:
-  text: 
+  systemImageName: 	chevron.down.circle.fill
   <<: *zkhx
 
 verticalCandidateReturnButtonStyle:
@@ -370,7 +370,7 @@ verticalCandidateReturnButtonStyle:
   foregroundStyle: verticalCandidateReturnButtonForegroundStyle
 
 verticalCandidateReturnButtonForegroundStyle:
-  text: 
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *zkhx
 
 verticalCandidateBackspaceButtonStyle:
@@ -379,7 +379,7 @@ verticalCandidateBackspaceButtonStyle:
     - verticalCandidateBackspaceButtonForegroundStyle
 
 verticalCandidateBackspaceButtonForegroundStyle:
-  text: 
+  systemImageName: delete.left
   <<: *zkhx
 
 keyboard:

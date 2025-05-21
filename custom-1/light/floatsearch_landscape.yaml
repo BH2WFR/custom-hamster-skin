@@ -31,7 +31,7 @@ keyboardStyle:
 keyboardBackgroundStyle:
   type: original
   normalColor: e1e2e8dd
-  cornerRadius: 8
+  cornerRadius: 6
   borderSize: 0.5
   normalBorderColor: 22222255
   normalLowerEdgeColor: 55555555

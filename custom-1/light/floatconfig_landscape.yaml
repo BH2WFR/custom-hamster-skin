@@ -3,7 +3,7 @@
   insets: { top: 6, left: 5, bottom: 6, right: 5 }
   normalColor: FFFFFF
   highlightColor: E3E4E9
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: AEAEAE
   highlightLowerEdgeColor: 26262626
 
@@ -48,7 +48,7 @@ keyboardStyle:
 keyboardBackgroundStyle:
   type: original
   normalColor: e1e2e8dd
-  cornerRadius: 8
+  cornerRadius: 6
   borderSize: 0.5
   normalBorderColor: 22222255
   normalLowerEdgeColor: 55555555

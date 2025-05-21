@@ -1,9 +1,9 @@
 按键背景: &key_bg
   type: original
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 66696e
   highlightColor: 4a4d50
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -48,7 +48,7 @@ keyboardStyle:
 keyboardBackgroundStyle:
   type: original
   normalColor: 2D2D2DDD
-  cornerRadius: 8
+  cornerRadius: 6
   borderSize: 0.5
   normalBorderColor: 22222255
   normalLowerEdgeColor: 55555555

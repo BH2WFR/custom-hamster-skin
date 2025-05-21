@@ -38,7 +38,7 @@
 
 展开候选功能键字符样式: &zkhx
   center:
-    y: 0.8
+    y: 0.5
   fontSize: 0.88em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -48,7 +48,7 @@
   insets: {top: 3, left: 3, bottom: 3, right: 3}
   normalColor: 66696e
   highlightColor: 4a4d50
-  cornerRadius: 9
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -56,7 +56,7 @@
   type: original
   normalColor: 4a4d50
   highlightColor: 4a4d50
-  cornerRadius: 9
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -65,7 +65,7 @@
   insets: {top: 3, left: 3, bottom: 3, right: 3}
   normalColor: 66696e
   highlightColor: 66696e
-  cornerRadius: 9
+  cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
@@ -74,7 +74,7 @@
   insets: {top: 3, left: 3, bottom: 3, right: 3}
   normalColor: 3379f5
   highlightColor: 2769dd
-  cornerRadius: 9
+  cornerRadius: 5
   normalLowerEdgeColor: 222222
   highlightLowerEdgeColor: 222222
 
@@ -116,6 +116,14 @@
   center:
     x: 0.75
     y: 0.65
+  fontSize: 0.5em
+  normalColor: *key_textcolor2
+  highlightColor: *key_textcolor2_press
+
+下划字符图片: &xhzf_image
+  center:
+    x: 0.8
+    y: 0.27
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -190,7 +198,7 @@ enter前景: &enter_qj
 
 列表栏高亮背景: &lb_hl
   type: original
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 383838
   cornerRadius: 6
 
@@ -283,6 +291,14 @@ ButtonSwipeDownHintForegroundLong: &xhqp_long
     x: 0.5
     y: 0.73
   fontSize: 0.9em
+  normalColor: *hdqp_Color
+
+#下划气泡字符样式 (图片版)
+ButtonSwipeDownHintForegroundImage: &xhqp_image
+  center:
+    x: 0.5
+    y: 0.4
+  fontSize: 1.125em
   normalColor: *hdqp_Color
 
 #长按气泡字符样式
@@ -488,7 +504,7 @@ toolbarButton6ForegroundStyle:
   targetScale: *toolbarButton_targetScale
 
 horizontalCandidateStyle:
-  insets: {left: 5, top: 5, bottom: 5}
+  insets: {left: 3, top: 3, bottom: 3}
   candidateStateButtonStyle: candidateStateButtonStyle
   highlightBackgroundColor: 00000000
   preferredBackgroundColor: 00000000
@@ -513,7 +529,7 @@ candidateStateButtonForegroundStyle:
 
 verticalCandidateStyle:
   insets: {top: 3, bottom: 3, left: 4, right: 4}
-  bottomRowHeight: 43
+  bottomRowHeight: 40
   backgroundStyle: verticalCandidateBackgroundStyle
   candidateStyle: verticalCandidateOfCandidateStyle
   pageUpButtonStyle: verticalCandidatePageUpButtonStyle
@@ -523,7 +539,7 @@ verticalCandidateStyle:
 
 verticalCandidateOfCandidateStyle:
   insets: {top: 3, bottom: 6, left: 8, right: 8}
-  cornerRadius: 9
+  cornerRadius: 6
   backgroundColor: *zkhxbj
   separatorColor: 00000000
   highlightBackgroundColor: 00000000
@@ -543,11 +559,11 @@ verticalCandidatePageUpButtonStyle:
   foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
 
 verticalCandidateButtonBackgroundStyle:
-  insets: {top: 3, left: 8, bottom: 3, right: 8}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   <<: *Function_bg
 
 verticalCandidatePageUpButtonForegroundStyle:
-  text: 
+  systemImageName: chevron.up.circle.fill
   <<: *zkhx
 
 verticalCandidatePageDownButtonStyle:
@@ -555,7 +571,7 @@ verticalCandidatePageDownButtonStyle:
   foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
 
 verticalCandidatePageDownButtonForegroundStyle:
-  text: 
+  systemImageName: 	chevron.down.circle.fill
   <<: *zkhx
 
 verticalCandidateReturnButtonStyle:
@@ -563,7 +579,7 @@ verticalCandidateReturnButtonStyle:
   foregroundStyle: verticalCandidateReturnButtonForegroundStyle
 
 verticalCandidateReturnButtonForegroundStyle:
-  text: 
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *zkhx
 
 verticalCandidateBackspaceButtonStyle:
@@ -572,7 +588,7 @@ verticalCandidateBackspaceButtonStyle:
   - verticalCandidateBackspaceButtonForegroundStyle
 
 verticalCandidateBackspaceButtonForegroundStyle:
-  text: 
+  systemImageName: delete.left
   <<: *zkhx
 
 keyboard:
@@ -3118,13 +3134,15 @@ symButton:
     width: 292/784
   backgroundStyle: symButtonBackgroundStyle
   foregroundStyle:
-  - symButtonForegroundStyle
+    - symButtonForegroundStyle
+    - symButtonDownForegroundStyle
   action: {keyboardType: symbolic}
+  hintStyle: symButtonHintStyle
   swipeUpAction: {keyboardType: emoji}
   swipeDownAction: {keyboardType: emoji}
 
 symButtonBackgroundStyle:
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
   animation: animation
   <<: *Function_bg
 
@@ -3132,6 +3150,24 @@ symButtonForegroundStyle:
   animation: animation
   text: 符
   <<: *sym_qj
+
+symButtonDownForegroundStyle:
+  animation: animation
+  text: 🤣
+  <<: *xhzf
+
+symButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  swipeUpForegroundStyle: symButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: symButtonSwipeDownHintForegroundStyle
+
+symButtonSwipeUpHintForegroundStyle:
+  text: 🤣
+  <<: *uhqp
+
+symButtonSwipeDownHintForegroundStyle:
+  text: 🤣
+  <<: *xhqp
 
 dotButton:
   size:
@@ -3201,19 +3237,21 @@ spaceButtonForegroundStyle:
 
 spaceButtonForegroundStyle1:
   animation: animation
-  text: |-
-    // JavaScript
-    function getText() {
-      const candidate = $getRimeCandidates()
-      if (candidate && candidate.length > 0) {
-        return candidate[0].text;
-      }
-      const preedit = $getRimePreedit();
-      if (preedit) {
-          return preedit;
-      }
-    }
-  <<: *space_qj1
+  systemImageName: 1.circle
+  <<: *Backspace_qj
+
+spaceButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  swipeUpForegroundStyle: spaceButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: spaceButtonSwipeDownHintForegroundStyle
+
+spaceButtonSwipeUpHintForegroundStyle:
+  systemImageName: 2.circle
+  <<: *xhqp_image
+
+spaceButtonSwipeDownHintForegroundStyle:
+  systemImageName: 3.circle
+  <<: *xhqp_image
 
 cnenButton:
   size:
@@ -3283,10 +3321,12 @@ enterButton:
     width: 292/784
   backgroundStyle: enterButtonBackgroundStyle
   foregroundStyle:
-  - enterButtonForegroundStyle
+    - enterButtonForegroundStyle
+    - enterButtonDownForegroundStyle
   action: enter
-  swipeUpAction: {shortcutCommand: '#换行'}
-  swipeDownAction: {shortcutCommand: '#方案切换'}
+  hintStyle: enterButtonHintStyle
+  swipeUpAction: {shortcutCommand: '#Enter'}
+  swipeDownAction: {shortcutCommand: '#换行'}
 
 enterButtonBackgroundStyle:
   animation: animation
@@ -3316,6 +3356,19 @@ enterButtonForegroundStyle:
       }
     }
   <<: *enter_qj
+
+enterButtonDownForegroundStyle:
+  animation: animation
+  systemImageName: return
+  <<: *xhzf_image
+
+enterButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  swipeDownForegroundStyle: enterButtonSwipeDownHintForegroundStyle
+  
+enterButtonSwipeDownHintForegroundStyle:
+  text: '换行'
+  <<: *xhqp_long
 
 collection:
   size:

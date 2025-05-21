@@ -1,14 +1,14 @@
-预编辑区高度: &preedit_Height 26
-工具栏高度: &toolbar_Height 40
-键盘区高度: &keyboard_Height 226
+预编辑区高度: &preedit_Height 20
+工具栏高度: &toolbar_Height 28
+键盘区高度: &keyboard_Height 190
 
-编码字体大小: &FontSize_preedit 0.88em
-横排序号字体大小: &FontSize_hpxh 1.19em
-横排文字字体大小: &FontSize_hpwz 1.19em
-横排注释字体大小: &FontSize_hpvu 0.81em
-展开序号字体大小: &FontSize_xlxh 1.125em
-展开文字字体大小: &FontSize_xlwz 1.125em
-展开注释字体大小: &FontSize_xlvu 0.75em
+编码字体大小: &FontSize_preedit 0.8em
+横排序号字体大小: &FontSize_hpxh 0.6em
+横排文字字体大小: &FontSize_hpwz 1.0em
+横排注释字体大小: &FontSize_hpvu 0.7em
+展开序号字体大小: &FontSize_xlxh 0.8em
+展开文字字体大小: &FontSize_xlwz 1.0em
+展开注释字体大小: &FontSize_xlvu 0.7em
 
 编码色: &preedit_textColor FDFDFD
 首选色: &textfirst_color 4c8dff
@@ -31,7 +31,7 @@
 
 展开候选功能键字符样式: &zkhx
   center:
-    y: 0.8
+    y: 0.5
   fontSize: 0.88em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -44,42 +44,42 @@
 
 列表栏背景: &lb_bj
   type: original
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 4a4d50
   highlightColor: 4a4d50
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 列表栏高亮背景: &lb_hl
   type: original
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 383838
   cornerRadius: 6
 
 详情栏背景: &xql_bg
   type: original
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: *zkhxbj
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 功能键背景: &Function_bg
   type: original
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 4a4d50
   highlightColor: 4a4d50
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 backspace背景: &backspace_bg
   type: original
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 3379f5
   highlightColor: 2769dd
-  cornerRadius: 9
+  cornerRadius: 6
   normalLowerEdgeColor: 222222
   highlightLowerEdgeColor: 222222
 
@@ -280,7 +280,7 @@ toolbarButton6ForegroundStyle:
   targetScale: *toolbarButton_targetScale
 
 horizontalCandidateStyle:
-  insets: {left: 5, top: 5, bottom: 5}
+  insets: {left: 3, top: 3, bottom: 3}
   candidateStateButtonStyle: candidateStateButtonStyle
   highlightBackgroundColor: 00000000
   preferredBackgroundColor: 00000000
@@ -305,7 +305,7 @@ candidateStateButtonForegroundStyle:
 
 verticalCandidateStyle:
   insets: {top: 3, bottom: 3, left: 4, right: 4}
-  bottomRowHeight: 43
+  bottomRowHeight: 40
   backgroundStyle: verticalCandidateBackgroundStyle
   candidateStyle: verticalCandidateOfCandidateStyle
   pageUpButtonStyle: verticalCandidatePageUpButtonStyle
@@ -315,7 +315,7 @@ verticalCandidateStyle:
 
 verticalCandidateOfCandidateStyle:
   insets: {top: 3, bottom: 6, left: 8, right: 8}
-  cornerRadius: 9
+  cornerRadius: 6
   backgroundColor: *zkhxbj
   separatorColor: 00000000
   highlightBackgroundColor: 00000000
@@ -335,11 +335,11 @@ verticalCandidatePageUpButtonStyle:
   foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
 
 verticalCandidateButtonBackgroundStyle:
-  insets: {top: 3, left: 8, bottom: 3, right: 8}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   <<: *Function_bg
 
 verticalCandidatePageUpButtonForegroundStyle:
-  text: 
+  systemImageName: chevron.up.circle.fill
   <<: *zkhx
 
 verticalCandidatePageDownButtonStyle:
@@ -347,7 +347,7 @@ verticalCandidatePageDownButtonStyle:
   foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
 
 verticalCandidatePageDownButtonForegroundStyle:
-  text: 
+  systemImageName: 	chevron.down.circle.fill
   <<: *zkhx
 
 verticalCandidateReturnButtonStyle:
@@ -355,7 +355,7 @@ verticalCandidateReturnButtonStyle:
   foregroundStyle: verticalCandidateReturnButtonForegroundStyle
 
 verticalCandidateReturnButtonForegroundStyle:
-  text: 
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *zkhx
 
 verticalCandidateBackspaceButtonStyle:
@@ -364,7 +364,7 @@ verticalCandidateBackspaceButtonStyle:
     - verticalCandidateBackspaceButtonForegroundStyle
 
 verticalCandidateBackspaceButtonForegroundStyle:
-  text: 
+  systemImageName: delete.left
   <<: *zkhx
 
 keyboard:

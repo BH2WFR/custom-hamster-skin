@@ -1,14 +1,14 @@
-预编辑区高度: &preedit_Height 26
-工具栏高度: &toolbar_Height 40
-键盘区高度: &keyboard_Height 226
+预编辑区高度: &preedit_Height 20
+工具栏高度: &toolbar_Height 28
+键盘区高度: &keyboard_Height 190
 
-编码字体大小: &FontSize_preedit 0.88em
-横排序号字体大小: &FontSize_hpxh 1.19em
-横排文字字体大小: &FontSize_hpwz 1.19em
-横排注释字体大小: &FontSize_hpvu 0.81em
-展开序号字体大小: &FontSize_xlxh 1.125em
-展开文字字体大小: &FontSize_xlwz 1.125em
-展开注释字体大小: &FontSize_xlvu 0.75em
+编码字体大小: &FontSize_preedit 0.8em
+横排序号字体大小: &FontSize_hpxh 0.6em
+横排文字字体大小: &FontSize_hpwz 1.0em
+横排注释字体大小: &FontSize_hpvu 0.7em
+展开序号字体大小: &FontSize_xlxh 0.8em
+展开文字字体大小: &FontSize_xlwz 1.0em
+展开注释字体大小: &FontSize_xlvu 0.7em
 
 编码色: &preedit_textColor 070707
 首选色: &textfirst_color 377DFA
@@ -31,7 +31,7 @@
 
 展开候选功能键字符样式: &zkhx
   center:
-    y: 0.8
+    y: 0.5
   fontSize: 0.88em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -42,7 +42,7 @@
 
 列表栏高亮背景: &lb_hl
   type: original
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: FFFFFFBB
   cornerRadius: 6
 
@@ -50,7 +50,7 @@
   type: original
   normalColor: FFFFFF
   highlightColor: E3E4E9
-  cornerRadius: 10
+  cornerRadius: 6
   normalLowerEdgeColor: AEAEAE
   highlightLowerEdgeColor: 888888
 
@@ -58,7 +58,7 @@
   type: original
   normalColor: E3E4E9
   highlightColor: 93939744
-  cornerRadius: 10
+  cornerRadius: 6
   normalLowerEdgeColor: 26262626
   highlightLowerEdgeColor: 17171714
 
@@ -66,7 +66,7 @@
   type: original
   normalColor: 3379f5
   highlightColor: 296bdf
-  cornerRadius: 10
+  cornerRadius: 6
   normalLowerEdgeColor: 555555
   highlightLowerEdgeColor: AEAEAE
 
@@ -315,7 +315,7 @@ toolbarButton6ForegroundStyle:
   targetScale: *toolbarButton_targetScale
 
 horizontalCandidateStyle:
-  insets: {left: 5, top: 5, bottom: 5}
+  insets: {left: 3, top: 3, bottom: 3}
   candidateStateButtonStyle: candidateStateButtonStyle
   highlightBackgroundColor: 00000000
   preferredBackgroundColor: 00000000
@@ -340,7 +340,7 @@ candidateStateButtonForegroundStyle:
 
 verticalCandidateStyle:
   insets: {top: 3, bottom: 3, left: 4, right: 4}
-  bottomRowHeight: 43
+  bottomRowHeight: 40
   backgroundStyle: verticalCandidateBackgroundStyle
   candidateStyle: verticalCandidateOfCandidateStyle
   pageUpButtonStyle: verticalCandidatePageUpButtonStyle
@@ -350,7 +350,7 @@ verticalCandidateStyle:
 
 verticalCandidateOfCandidateStyle:
   insets: {top: 3, bottom: 6, left: 8, right: 8}
-  cornerRadius: 9
+  cornerRadius: 6
   backgroundColor: *zkhxbj
   separatorColor: 00000000
   highlightBackgroundColor: 00000000
@@ -370,11 +370,11 @@ verticalCandidatePageUpButtonStyle:
   foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
 
 verticalCandidateButtonBackgroundStyle:
-  insets: {top: 3, left: 8, bottom: 3, right: 8}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   <<: *Function_bg
 
 verticalCandidatePageUpButtonForegroundStyle:
-  text: 
+  systemImageName: chevron.up.circle.fill
   <<: *zkhx
 
 verticalCandidatePageDownButtonStyle:
@@ -382,7 +382,7 @@ verticalCandidatePageDownButtonStyle:
   foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
 
 verticalCandidatePageDownButtonForegroundStyle:
-  text: 
+  systemImageName: 	chevron.down.circle.fill
   <<: *zkhx
 
 verticalCandidateReturnButtonStyle:
@@ -390,7 +390,7 @@ verticalCandidateReturnButtonStyle:
   foregroundStyle: verticalCandidateReturnButtonForegroundStyle
 
 verticalCandidateReturnButtonForegroundStyle:
-  text: 
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *zkhx
 
 verticalCandidateBackspaceButtonStyle:
@@ -399,7 +399,7 @@ verticalCandidateBackspaceButtonStyle:
     - verticalCandidateBackspaceButtonForegroundStyle
 
 verticalCandidateBackspaceButtonForegroundStyle:
-  text: 
+  systemImageName: delete.left
   <<: *zkhx
 
 keyboard:
@@ -451,7 +451,7 @@ collection:
   cellStyle: collectionCellStyle
 
 collectionBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -475,7 +475,7 @@ symbolButton:
   swipeUpAction: {keyboardType: emoji}
 
 symbolButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -491,7 +491,7 @@ symbolButtonForegroundStyle:
   action: {character: 1}
 
 1ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -507,7 +507,7 @@ symbolButtonForegroundStyle:
   action: {character: 4}
 
 4ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -523,7 +523,7 @@ symbolButtonForegroundStyle:
   action: {character: 7}
 
 7ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -541,7 +541,7 @@ returnButton:
   action: returnPrimaryKeyboard
 
 returnButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -557,7 +557,7 @@ returnButtonForegroundStyle:
   action: {character: 2}
 
 2ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -573,7 +573,7 @@ returnButtonForegroundStyle:
   action: {character: 5}
 
 5ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -589,7 +589,7 @@ returnButtonForegroundStyle:
   action: {character: 8}
 
 8ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -607,7 +607,7 @@ returnButtonForegroundStyle:
   action: {character: 0}
 
 0ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -623,7 +623,7 @@ returnButtonForegroundStyle:
   action: {character: 3}
 
 3ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -639,7 +639,7 @@ returnButtonForegroundStyle:
   action: {character: 6}
 
 6ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -655,7 +655,7 @@ returnButtonForegroundStyle:
   action: {character: 9}
 
 9ButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *key_bg
 
@@ -672,7 +672,7 @@ spaceButton:
   action: space
 
 spaceButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -688,7 +688,7 @@ backspaceButton:
   repeatAction: backspace
 
 backspaceButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -703,7 +703,7 @@ periodButton:
   action: {character: .}
 
 periodButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -718,7 +718,7 @@ equalButton:
   action: {character: '='}
 
 equalButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Function_bg
 
@@ -736,7 +736,7 @@ enterButton:
   action: enter
 
 enterButtonBackgroundStyle:
-  insets: {top: 5, left: 3, bottom: 6, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   animation: animation
   <<: *Enter_bg
 
