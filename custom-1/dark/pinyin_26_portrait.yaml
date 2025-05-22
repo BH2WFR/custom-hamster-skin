@@ -2791,7 +2791,7 @@ cButtonUpForegroundStyle:
 
 cButtonDownForegroundStyle:
   animation: animation
-  text: 複
+  text: 复
   <<: *xhzf
 
 cButtonHintStyle:
