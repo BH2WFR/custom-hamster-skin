@@ -112,6 +112,14 @@
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
 
+上划字符图片: &uhzf_image
+  center:
+    x: 0.23
+    y: 0.22
+  fontSize: 0.5em
+  normalColor: *key_textcolor2
+  highlightColor: *key_textcolor2_press
+
 下划字符: &xhzf
   center:
     x: 0.7
@@ -247,7 +255,21 @@ alphabeticHoldSymbolsSelectedStyle:
 ButtonHintForeground: &axqp
   center:
     x: 0.5
-    y: 0.7
+    y: 0.65
+  fontSize: 1.25em
+  normalColor: *axqp_Color
+
+ButtonHintForegroundLong: &axqp_long
+  center:
+    x: 0.5
+    y: 0.75
+  fontSize: 0.8em
+  normalColor: *axqp_Color
+
+ButtonHintForegroundImage: &axqp_image
+  center:
+    x: 0.5
+    y: 0.4
   fontSize: 1.25em
   normalColor: *axqp_Color
 
@@ -271,8 +293,8 @@ ButtonSwipeDownHintForeground: &xhqp
 ButtonSwipeDownHintForegroundLong: &xhqp_long
   center:
     x: 0.5
-    y: 0.8
-  fontSize: 0.6em
+    y: 0.75
+  fontSize: 0.8em
   normalColor: *hdqp_Color
 
 #下划气泡字符样式 (图片版)
@@ -1713,7 +1735,7 @@ sButton:
   action: {character: s}
   uppercasedStateAction: {character: S}
   swipeUpAction: {character: /}
-  swipeDownAction: {symbol: \}
+  swipeDownAction: {character: \}
   holdSymbolsStyle: sButtonHoldSymbolsStyle
 
 sButtonBackgroundStyle:
@@ -1764,9 +1786,11 @@ sButtonHoldSymbolsStyle:
     - sButtonHoldSymbolsForegroundStyle0
     - sButtonHoldSymbolsForegroundStyle1
     - sButtonHoldSymbolsForegroundStyle2
+    - sButtonHoldSymbolsForegroundStyle3
   actions:
     - {symbol: \n}
     - {symbol: /}
+    - {symbol: '\'}
     - {symbol: '[\s\S]'}
   selectedStyle: alphabeticHoldSymbolsSelectedStyle
   selectedIndex: 1
@@ -1780,6 +1804,10 @@ sButtonHoldSymbolsForegroundStyle1:
   <<: *iaqp
 
 sButtonHoldSymbolsForegroundStyle2:
+  text: '\'
+  <<: *iaqp
+
+sButtonHoldSymbolsForegroundStyle3:
   text: '[\s\S]'
   <<: *iaqp
 
@@ -2462,10 +2490,14 @@ shiftButton:
       percentage: 1
     alignment: left
   backgroundStyle: shiftButtonBackgroundStyle
-  foregroundStyle: shiftButtonForegroundStyle
+  foregroundStyle:
+    - shiftButtonForegroundStyle
+    - shiftButtonUpForegroundStyle
+    - shiftButtonDownForegroundStyle
   uppercasedStateForegroundStyle: shiftButtonUppercasedForegroundStyle
   capsLockedStateForegroundStyle: shiftButtonCapsLockedForegroundStyle
   preeditStateForegroundStyle: shiftButtonPreeditStateForegroundStyle
+  hintStyle: shiftButtonHintStyle
   action: shift
   swipeUpAction: tab
   swipeDownAction: {shortcutCommand: '#capsLocked'}
@@ -2481,6 +2513,16 @@ shiftButtonForegroundStyle:
   systemImageName: shift
   <<: *Shift_qj
 
+shiftButtonUpForegroundStyle:
+  animation: animation
+  systemImageName: arrow.right.to.line
+  <<: *uhzf_image
+
+shiftButtonDownForegroundStyle:
+  animation: animation
+  systemImageName: shift.fill
+  <<: *xhzf_image
+
 shiftButtonPreeditStateForegroundStyle:
   text: "；"
   <<: *Shift_qj_semicolon
@@ -2494,6 +2536,24 @@ shiftButtonCapsLockedForegroundStyle:
   animation: animation
   systemImageName: capslock.fill
   <<: *Shift_qj
+
+shiftButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: shiftButtonHintForegroundStyle
+  swipeUpForegroundStyle: shiftButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: shiftButtonSwipeDownHintForegroundStyle
+
+shiftButtonHintForegroundStyle:
+  systemImageName: shift
+  <<: *axqp_image
+
+shiftButtonSwipeUpHintForegroundStyle:
+  text: Tab
+  <<: *xhqp_long
+
+shiftButtonSwipeDownHintForegroundStyle:
+  systemImageName: capslock.fill
+  <<: *xhqp_image
 
 zButton:
   size:
@@ -3127,6 +3187,7 @@ backspaceButton:
   backgroundStyle: backspaceButtonBackgroundStyle
   foregroundStyle:
     - backspaceButtonForegroundStyle
+  hintStyle: backspaceButtonHintStyle
   action: backspace
   repeatAction: backspace
   swipeLeftAction: {shortcutCommand: '#重输'}
@@ -3142,6 +3203,30 @@ backspaceButtonForegroundStyle:
   animation: animation
   systemImageName: delete.left
   <<: *Backspace_qj
+
+backspaceButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: backspaceButtonHintForegroundStyle
+  swipeUpForegroundStyle: backspaceButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: backspaceButtonSwipeDownHintForegroundStyle
+  swipeLeftForegroundStyle: backspaceButtonSwipeLeftHintForegroundStyle
+
+backspaceButtonHintForegroundStyle:
+  systemImageName: delete.left
+  <<: *axqp_image
+
+backspaceButtonSwipeUpHintForegroundStyle:
+  text: '删除'
+  <<: *xhqp_long
+
+backspaceButtonSwipeDownHintForegroundStyle:
+  text: '删除'
+  <<: *xhqp_long
+
+backspaceButtonSwipeLeftHintForegroundStyle:
+  systemImageName: delete.left.fill
+  <<: *xhqp_image
+
 
 symButton:
   size:
@@ -3173,8 +3258,13 @@ symButtonDownForegroundStyle:
 
 symButtonHintStyle:
   backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: symButtonHintForegroundStyle
   swipeUpForegroundStyle: symButtonSwipeUpHintForegroundStyle
   swipeDownForegroundStyle: symButtonSwipeDownHintForegroundStyle
+
+symButtonHintForegroundStyle:
+  text: 符
+  <<: *axqp
 
 symButtonSwipeUpHintForegroundStyle:
   text: 🤣
@@ -3341,8 +3431,15 @@ spaceButtonForegroundStyle1:
 
 spaceButtonHintStyle:
   backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: spaceButtonHintForegroundStyle
   swipeUpForegroundStyle: spaceButtonSwipeUpHintForegroundStyle
   swipeDownForegroundStyle: spaceButtonSwipeDownHintForegroundStyle
+  swipeLeftForegroundStyle: spaceButtonSwipeLeftHintForegroundStyle
+  swipeRightForegroundStyle: spaceButtonSwipeRightHintForegroundStyle
+
+spaceButtonHintForegroundStyle:
+  systemImageName: space
+  <<: *axqp_image
 
 spaceButtonSwipeUpHintForegroundStyle:
   systemImageName: 2.circle
@@ -3350,6 +3447,14 @@ spaceButtonSwipeUpHintForegroundStyle:
 
 spaceButtonSwipeDownHintForegroundStyle:
   systemImageName: 3.circle
+  <<: *xhqp_image
+
+spaceButtonSwipeLeftHintForegroundStyle:
+  systemImageName: chevron.left.circle.fill
+  <<: *xhqp_image
+
+spaceButtonSwipeRightHintForegroundStyle:
+  systemImageName: chevron.right.circle.fill
   <<: *xhqp_image
 
 cnenButton:
@@ -3364,6 +3469,7 @@ cnenButton:
   action: {keyboardType: alphabetic}
   swipeUpAction: {shortcutCommand: '#中英切换'}
   swipeDownAction: {shortcutCommand: '#简繁切换'}
+  hintStyle: cnenButtonHintStyle
   holdSymbolsStyle: cnenButtonHoldSymbolsStyle
 
 cnenButtonBackgroundStyle:
@@ -3415,6 +3521,23 @@ cnenButtonHoldSymbolsForegroundStyleNext:
   text: 切换
   <<: *iaqp_long
 
+cnenButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: cnenButtonHintForegroundStyle
+  swipeUpForegroundStyle: cnenButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: cnenButtonSwipeDownHintForegroundStyle
+  
+cnenButtonHintForegroundStyle:
+  text: 中英
+  <<: *axqp_long
+
+cnenButtonSwipeUpHintForegroundStyle:
+  text: Ascii
+  <<: *xhqp_long
+  
+cnenButtonSwipeDownHintForegroundStyle:
+  text: 繁简
+  <<: *xhqp_long
 
 enterButton:
   size:
@@ -3465,8 +3588,18 @@ enterButtonDownForegroundStyle:
 
 enterButtonHintStyle:
   backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: enterButtonHintForegroundStyle
+  swipeUpForegroundStyle: enterButtonSwipeUpHintForegroundStyle
   swipeDownForegroundStyle: enterButtonSwipeDownHintForegroundStyle
-  
+
+enterButtonHintForegroundStyle:
+  systemImageName: return
+  <<: *axqp_image
+
+enterButtonSwipeUpHintForegroundStyle:
+  text: '\n'
+  <<: *uhqp
+
 enterButtonSwipeDownHintForegroundStyle:
   text: '换行'
   <<: *xhqp_long
