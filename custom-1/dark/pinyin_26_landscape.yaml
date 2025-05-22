@@ -45,7 +45,7 @@
 
 字符键背景: &key_bg
   type: original
-  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 808080
   highlightColor: AAAAAA
   cornerRadius: 5
@@ -62,7 +62,7 @@
 
 空格背景: &space_bg
   type: original
-  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 808080
   highlightColor: AAAAAA
   cornerRadius: 5
@@ -71,7 +71,7 @@
 
 回车键背景: &Enter_bg
   type: original
-  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 2A64C7
   highlightColor: 4082F3
   cornerRadius: 5
@@ -123,7 +123,7 @@
 下划字符图片: &xhzf_image
   center:
     x: 0.8
-    y: 0.27
+    y: 0.3
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -131,7 +131,7 @@
 下划字符回车: &xhzf_enter
   center:
     x: 0.8
-    y: 0.22
+    y: 0.3
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -3201,6 +3201,7 @@ dotButton:
   action: {character: ','}
   swipeUpAction: {character: .}
   swipeDownAction: {character: .}
+  hintStyle: dotButtonHintStyle
   holdSymbolsStyle: dotButtonHoldSymbolsStyle
 
 dotButtonBackgroundStyle:
@@ -3236,6 +3237,24 @@ dotButtonHoldSymbolsForegroundStyle0:
 dotButtonHoldSymbolsForegroundStyle1:
   text: 拆分
   <<: *iaqp_long
+
+dotButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: dotButtonHintForegroundStyle
+  swipeUpForegroundStyle: dotButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: dotButtonSwipeDownHintForegroundStyle
+
+dotButtonHintForegroundStyle:
+  text: '，'
+  <<: *axqp
+
+dotButtonSwipeUpHintForegroundStyle:
+  text: '。'
+  <<: *uhqp
+  
+dotButtonSwipeDownHintForegroundStyle:
+  text: '。'
+  <<: *uhqp
 
 spaceButton:
   size:
@@ -3569,7 +3588,7 @@ collectionCellForegroundStyle:
 periodButton:
   backgroundStyle: periodButtonBackgroundStyle
   foregroundStyle: periodButtonForegroundStyle
-  action: {character: .}
+  action: {symbol: .}
 
 periodButtonBackgroundStyle:
   insets: { top: 3, left: 3, bottom: 3, right: 3 }

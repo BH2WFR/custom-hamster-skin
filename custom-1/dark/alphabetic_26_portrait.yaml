@@ -3246,6 +3246,7 @@ dotButton:
   action: {symbol: .}
   swipeUpAction: {symbol: ','}
   swipeDownAction: {symbol: .}
+  hintStyle: dotButtonHintStyle
   holdSymbolsStyle: dotButtonHoldSymbolsStyle
 
 dotButtonBackgroundStyle:
@@ -3281,6 +3282,24 @@ dotButtonHoldSymbolsForegroundStyle0:
 dotButtonHoldSymbolsForegroundStyle1:
   text: 拆分
   <<: *iaqp_long
+
+dotButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: dotButtonHintForegroundStyle
+  swipeUpForegroundStyle: dotButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: dotButtonSwipeDownHintForegroundStyle
+
+dotButtonHintForegroundStyle:
+  text: ','
+  <<: *axqp
+
+dotButtonSwipeUpHintForegroundStyle:
+  text: '.'
+  <<: *uhqp
+  
+dotButtonSwipeDownHintForegroundStyle:
+  text: '.'
+  <<: *uhqp
 
 spaceButton:
   backgroundStyle: spaceButtonBackgroundStyle

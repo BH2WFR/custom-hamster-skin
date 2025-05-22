@@ -700,7 +700,7 @@ backspaceButtonForegroundStyle:
 periodButton:
   backgroundStyle: periodButtonBackgroundStyle
   foregroundStyle: periodButtonForegroundStyle
-  action: {character: .}
+  action: {symbol: .}
 
 periodButtonBackgroundStyle:
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}

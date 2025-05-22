@@ -123,7 +123,7 @@
 下划字符图片: &xhzf_image
   center:
     x: 0.8
-    y: 0.27
+    y: 0.3
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -131,7 +131,7 @@
 下划字符回车: &xhzf_enter
   center:
     x: 0.8
-    y: 0.22
+    y: 0.3
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -3187,6 +3187,7 @@ dotButton:
   action: {symbol: .}
   swipeUpAction: {symbol: ','}
   swipeDownAction: {symbol: .}
+  hintStyle: dotButtonHintStyle
   holdSymbolsStyle: dotButtonHoldSymbolsStyle
 
 dotButtonBackgroundStyle:
@@ -3222,6 +3223,24 @@ dotButtonHoldSymbolsForegroundStyle0:
 dotButtonHoldSymbolsForegroundStyle1:
   text: 拆分
   <<: *iaqp_long
+
+dotButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: dotButtonHintForegroundStyle
+  swipeUpForegroundStyle: dotButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: dotButtonSwipeDownHintForegroundStyle
+
+dotButtonHintForegroundStyle:
+  text: ','
+  <<: *axqp
+
+dotButtonSwipeUpHintForegroundStyle:
+  text: '.'
+  <<: *uhqp
+  
+dotButtonSwipeDownHintForegroundStyle:
+  text: '.'
+  <<: *uhqp
 
 spaceButton:
   size:
