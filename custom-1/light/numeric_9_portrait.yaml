@@ -73,7 +73,7 @@
 数字键前景: &zf
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 1.06em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press
@@ -81,7 +81,7 @@
 sym前景: &sym_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -89,7 +89,7 @@ sym前景: &sym_qj
 return前景: &return_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.5
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -113,7 +113,7 @@ Backspace前景: &Backspace_qj
 enter前景: &enter_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *enter_textcolor
   highlightColor: *enter_textcolor
@@ -121,7 +121,7 @@ enter前景: &enter_qj
 period键前景: &period_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 1.125em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -129,7 +129,7 @@ period键前景: &period_qj
 equal前景: &equal_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -547,7 +547,7 @@ returnButtonBackgroundStyle:
 
 returnButtonForegroundStyle:
   animation: animation
-  text: 返回
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *return_qj
 
 2Button:

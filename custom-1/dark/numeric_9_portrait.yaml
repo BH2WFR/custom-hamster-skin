@@ -14,7 +14,7 @@
 首选色: &textfirst_color 4c8dff
 次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color 2D2D2D
+键盘底色: &bg_Color 5B5B5B
 
 按键字符正常色: &key_textcolor1 FFFFFF
 按键字符高亮色: &key_textcolor1_press FFFFFF
@@ -27,7 +27,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表背景色: &zkhxbj 66696e
+展开候选列表背景色: &zkhxbj 333333
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -48,24 +48,24 @@
 
 数字键背景: &key_bg
   type: original
-  normalColor: 66696e
-  highlightColor: 4a4d50
+  normalColor: 808080
+  highlightColor: AAAAAA
   cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 功能键背景: &Function_bg
   type: original
-  normalColor: 4a4d50
-  highlightColor: 4a4d50
+  normalColor: 444444
+  highlightColor: 999999
   cornerRadius: 6
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 回车键背景: &Enter_bg
   type: original
-  normalColor: 3379f5
-  highlightColor: 296bdf
+  normalColor: 2A64C7
+  highlightColor: 4082F3
   cornerRadius: 6
   normalLowerEdgeColor: 222222
   highlightLowerEdgeColor: 222222
@@ -73,7 +73,7 @@
 数字键前景: &zf
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 1.06em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press
@@ -81,7 +81,7 @@
 sym前景: &sym_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -89,7 +89,7 @@ sym前景: &sym_qj
 return前景: &return_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.5
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -113,7 +113,7 @@ Backspace前景: &Backspace_qj
 enter前景: &enter_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *enter_textcolor
   highlightColor: *enter_textcolor
@@ -121,7 +121,7 @@ enter前景: &enter_qj
 period键前景: &period_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 1.125em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -129,7 +129,7 @@ period键前景: &period_qj
 equal前景: &equal_qj
   center:
     x: 0.5
-    y: 0.8
+    y: 0.75
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -547,7 +547,7 @@ returnButtonBackgroundStyle:
 
 returnButtonForegroundStyle:
   animation: animation
-  text: 返回
+  systemImageName: arrowshape.turn.up.left.fill
   <<: *return_qj
 
 2Button:

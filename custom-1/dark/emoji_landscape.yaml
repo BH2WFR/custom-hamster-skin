@@ -14,7 +14,7 @@
 首选色: &textfirst_color 4c8dff
 次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color 2D2D2D
+键盘底色: &bg_Color 5B5B5B
 
 按键字符色: &key_textcolor1 FFFFFF
 按键字符高亮色: &key_textcolor1_press FFFFFF
@@ -27,7 +27,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表和详情栏背景色: &zkhxbj 66696e
+展开候选列表和详情栏背景色: &zkhxbj 333333
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -59,8 +59,8 @@
 字符键背景: &key_bg
   type: original
   insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: 66696e
-  highlightColor: ee786c
+  normalColor: 808080
+  highlightColor: AAAAAA
   cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: ee786c
@@ -68,8 +68,8 @@
 功能键背景: &Function_bg
   type: original
   insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: 4a4d50
-  highlightColor: 4a4d50
+  normalColor: 444444
+  highlightColor: 999999
   cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818

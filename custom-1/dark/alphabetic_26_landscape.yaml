@@ -14,11 +14,11 @@
 首选色: &textfirst_color 4c8dff
 次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color 2D2D2D
+键盘底色: &bg_Color 5B5B5B
 
 按键字符正常色: &key_textcolor1 FFFFFF
 按键字符高亮色: &key_textcolor1_press FFFFFF
-上下划字符正常色: &key_textcolor2 A7AEB9
+上下划字符正常色: &key_textcolor2 D3D7DF
 上下划字符高亮色: &key_textcolor2_press FFFFFF
 回车键字符色: &enter_textcolor FFFFFF
 
@@ -34,7 +34,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表背景色: &zkhxbj 66696e
+展开候选列表背景色: &zkhxbj 333333
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -46,16 +46,16 @@
 字符键背景: &key_bg
   type: original
   insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: 66696e
-  highlightColor: 4a4d50
+  normalColor: 808080
+  highlightColor: AAAAAA
   cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
 
 功能键背景: &Function_bg
   type: original
-  normalColor: 4a4d50
-  highlightColor: 4a4d50
+  normalColor: 444444
+  highlightColor: 999999
   cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
@@ -63,8 +63,8 @@
 空格背景: &space_bg
   type: original
   insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: 66696e
-  highlightColor: 66696e
+  normalColor: 808080
+  highlightColor: AAAAAA
   cornerRadius: 5
   normalLowerEdgeColor: 181818
   highlightLowerEdgeColor: 181818
@@ -72,8 +72,8 @@
 回车键背景: &Enter_bg
   type: original
   insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: 3379f5
-  highlightColor: 2769dd
+  normalColor: 2A64C7
+  highlightColor: 4082F3
   cornerRadius: 5
   normalLowerEdgeColor: 222222
   highlightLowerEdgeColor: 222222
@@ -124,6 +124,14 @@
   center:
     x: 0.8
     y: 0.27
+  fontSize: 0.5em
+  normalColor: *key_textcolor2
+  highlightColor: *key_textcolor2_press
+
+下划字符回车: &xhzf_enter
+  center:
+    x: 0.8
+    y: 0.22
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
@@ -3360,7 +3368,7 @@ enterButtonForegroundStyle:
 enterButtonDownForegroundStyle:
   animation: animation
   systemImageName: return
-  <<: *xhzf_image
+  <<: *xhzf_enter
 
 enterButtonHintStyle:
   backgroundStyle: alphabeticHintBackgroundStyle

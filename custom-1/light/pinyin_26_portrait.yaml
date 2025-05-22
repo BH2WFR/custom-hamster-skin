@@ -18,8 +18,8 @@
 
 按键字符正常色: &key_textcolor1 070707
 按键字符高亮色: &key_textcolor1_press 070707
-上下划字符正常色: &key_textcolor2 A7AEB9
-上下划字符高亮色: &key_textcolor2_press A7AEB9
+上下划字符正常色: &key_textcolor2 727272
+上下划字符高亮色: &key_textcolor2_press 555555
 回车键字符色: &enter_textcolor FFFFFF
 
 按下气泡字符色: &axqp_Color FFFFFF
@@ -127,6 +127,14 @@
   fontSize: 0.5em
   normalColor: *key_textcolor2
   highlightColor: *key_textcolor2_press
+
+下划字符回车: &xhzf_enter
+  center:
+    x: 0.8
+    y: 0.22
+  fontSize: 0.5em
+  normalColor: EEEEEE
+  highlightColor: EEEEEE
 
 Shift前景: &Shift_qj
   center:
@@ -3434,7 +3442,7 @@ enterButtonForegroundStyle:
 enterButtonDownForegroundStyle:
   animation: animation
   systemImageName: return
-  <<: *xhzf_image
+  <<: *xhzf_enter
 
 enterButtonHintStyle:
   backgroundStyle: alphabeticHintBackgroundStyle
