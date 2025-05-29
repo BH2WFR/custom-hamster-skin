@@ -186,16 +186,16 @@ sym前景: &sym_qj
 
 dot前景: &dot_qj
   center:
-    x: 0.5
-    y: 0.85
+    x: 0.64
+    y: 0.88
   fontSize: 1em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
 dot上划字符: &dot_upqj
   center:
-    x: 0.58
-    y: 0.64
+    x: 0.66
+    y: 0.62
   fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
@@ -1788,7 +1788,7 @@ sButtonHoldSymbolsStyle:
     - sButtonHoldSymbolsForegroundStyle2
     - sButtonHoldSymbolsForegroundStyle3
   actions:
-    - {symbol: \n}
+    - {symbol: "\r"}
     - {symbol: /}
     - {symbol: '\'}
     - {symbol: '[\s\S]'}
@@ -1796,7 +1796,7 @@ sButtonHoldSymbolsStyle:
   selectedIndex: 1
 
 sButtonHoldSymbolsForegroundStyle0:
-  text: \n
+  text: '\r'
   <<: *iaqp
 
 sButtonHoldSymbolsForegroundStyle1:
@@ -3360,12 +3360,12 @@ dotButtonBackgroundStyle:
 
 dotButtonForegroundStyle:
   animation: animation
-  text: '，'
+  text: '。'
   <<: *dot_qj
 
 dotButtonUpForegroundStyle:
   animation: animation
-  text: 。
+  text: '，'
   <<: *dot_upqj
 
 dotButtonHoldSymbolsStyle:
@@ -3549,8 +3549,8 @@ enterButton:
     - enterButtonDownForegroundStyle
   action: enter
   hintStyle: enterButtonHintStyle
-  swipeUpAction: {shortcutCommand: '#Enter'}
-  swipeDownAction: {shortcutCommand: '#换行'}
+  swipeUpAction: {shortcutCommand: '#换行'}
+  swipeDownAction: {shortcutCommand: '#Enter'}
 
 enterButtonBackgroundStyle:
   animation: animation
@@ -3597,9 +3597,9 @@ enterButtonHintForegroundStyle:
   <<: *axqp_image
 
 enterButtonSwipeUpHintForegroundStyle:
-  text: '\n'
+  text: '\r'
   <<: *uhqp
 
 enterButtonSwipeDownHintForegroundStyle:
-  text: '换行'
-  <<: *xhqp_long
+  text: '\n'
+  <<: *xhqp
