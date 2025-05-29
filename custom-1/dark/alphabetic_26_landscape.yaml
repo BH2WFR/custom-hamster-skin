@@ -3273,9 +3273,9 @@ dotButton:
   foregroundStyle:
   - dotButtonForegroundStyle
   - dotButtonUpForegroundStyle
-  action: {symbol: .}
-  swipeUpAction: {symbol: ','}
-  swipeDownAction: {symbol: .}
+  action: {symbol: ','}
+  swipeUpAction: {symbol: '.'}
+  swipeDownAction: {symbol: '.'}
   hintStyle: dotButtonHintStyle
   holdSymbolsStyle: dotButtonHoldSymbolsStyle
 
@@ -3286,12 +3286,12 @@ dotButtonBackgroundStyle:
 
 dotButtonForegroundStyle:
   animation: animation
-  text: .
+  text: ','
   <<: *dot_qj
 
 dotButtonUpForegroundStyle:
   animation: animation
-  text: ','
+  text: '.'
   <<: *dot_upqj
 
 dotButtonHoldSymbolsStyle:
