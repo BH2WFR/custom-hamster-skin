@@ -14,7 +14,7 @@
 首选色: &textfirst_color 377DFA
 次选色: &text_Color 070707
 
-键盘底色: &bg_Color CFD3D8
+键盘底色: &bg_Color CFD3D800
 
 按键字符色: &key_textcolor1 070707
 删除键字符色: &backspace_textcolor FFFFFF

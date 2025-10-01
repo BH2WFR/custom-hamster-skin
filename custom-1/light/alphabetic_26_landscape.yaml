@@ -14,7 +14,7 @@
 首选色: &textfirst_color 377DFA
 次选色: &text_Color 070707
 
-键盘底色: &bg_Color CFD3D8
+键盘底色: &bg_Color CFD3D800
 
 按键字符正常色: &key_textcolor1 070707
 按键字符高亮色: &key_textcolor1_press 070707

@@ -14,7 +14,7 @@
 首选色: &textfirst_color 4c8dff
 次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color 5B5B5B
+键盘底色: &bg_Color 5B5B5B00
 
 按键字符正常色: &key_textcolor1 FFFFFF
 按键字符高亮色: &key_textcolor1_press FFFFFF
