@@ -1,23 +1,23 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 30
-键盘区高度: &keyboard_Height 240
+工具栏高度: &toolbar_Height 32
+键盘区高度: &keyboard_Height 200
 
-编码字体大小: &FontSize_preedit 0.88em
-横排序号字体大小: &FontSize_hpxh 1.19em
-横排文字字体大小: &FontSize_hpwz 1.19em
-横排注释字体大小: &FontSize_hpvu 0.81em
-展开序号字体大小: &FontSize_xlxh 1.125em
-展开文字字体大小: &FontSize_xlwz 1.125em
-展开注释字体大小: &FontSize_xlvu 0.75em
+编码字体大小: &FontSize_preedit 0.8em
+横排序号字体大小: &FontSize_hpxh 0.6em
+横排文字字体大小: &FontSize_hpwz 1.0em
+横排注释字体大小: &FontSize_hpvu 0.7em
+展开序号字体大小: &FontSize_xlxh 0.8em
+展开文字字体大小: &FontSize_xlwz 1.0em
+展开注释字体大小: &FontSize_xlvu 0.7em
 
-编码色: &preedit_textColor 070707
-首选色: &textfirst_color 377DFA
-次选色: &text_Color 070707
+编码色: &preedit_textColor FDFDFD
+首选色: &textfirst_color 4c8dff
+次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color CFD3D800
+键盘底色: &bg_Color 5B5B5B00
 
-按键字符色: &key_textcolor1 070707
-按键字符高亮色: &key_textcolor1_press FFFFFF
+按键字符色: &key_textcolor1 FFFFFF
+删除键字符色: &backspace_textcolor FFFFFF
 角标色: &key_textcolor2 A7AEB9
 
 状态栏图标缩放: &toolbarButton_targetScale 0.55
@@ -27,7 +27,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表和详情栏背景色: &zkhxbj F3F4F9
+展开候选列表和详情栏背景色: &zkhxbj 333333
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -40,79 +40,62 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
   badgeNormalColor: *key_textcolor2
-  fontSize: 0.75em
+  fontSize: 0.875em
+
+列表栏背景: &lb_bj
+  type: original
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  normalColor: 4a4d50
+  highlightColor: 4a4d50
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
 列表栏高亮背景: &lb_hl
   type: original
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: FFFFFFBB
-  cornerRadius: 4
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  normalColor: 383838
+  cornerRadius: 6
 
 详情栏背景: &xql_bg
   type: original
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: *zkhxbj
-  cornerRadius: 5
-  normalLowerEdgeColor: 26262626
-  highlightLowerEdgeColor: 17171714
-
-字符键背景: &key_bg
-  type: original
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: FFFFFF
-  highlightColor: E3E4E9
-  cornerRadius: 5
-  normalLowerEdgeColor: AEAEAE
-  highlightLowerEdgeColor: 26262626
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
 功能键背景: &Function_bg
   type: original
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
-  normalColor: E3E4E9
-  highlightColor: 93939744
-  borderSize: 0.7
-  normalBorderColor: 707070
-  cornerRadius: 5
-  normalLowerEdgeColor: 26262626
-  highlightLowerEdgeColor: 17171714
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  normalColor: 444444
+  highlightColor: 999999
+  cornerRadius: 6
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
-数字键前景: &szzf
+backspace背景: &backspace_bg
+  type: original
+  insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
+  normalColor: 2A64C7
+  highlightColor: 4082F3
+  cornerRadius: 6
+  normalLowerEdgeColor: 222222
+  highlightLowerEdgeColor: 222222
+
+backspace前景: &backspace_qj
   center:
     x: 0.5
-    y: 0.75
-  fontSize: 0.9em
-  normalColor: *key_textcolor1
-  highlightColor: *key_textcolor1_press
-
-period键前景: &period_qj
-  center:
-    x: 0.5
-    y: 0.7
-  fontSize: 1.125em
-  normalColor: *key_textcolor1
-  highlightColor: *key_textcolor1
-
-equal前景: &equal_qj
-  center:
-    x: 0.5
-    y: 0.7
-  fontSize: 0.88em
-  normalColor: *key_textcolor1
-  highlightColor: *key_textcolor1
-
-运算符号前景: &yxfh_qj
-  center:
-    x: 0.5
-    y: 0.72
-  fontSize: 0.88em
-  normalColor: *key_textcolor1
-  highlightColor: *key_textcolor1_press
+    y: 0.5
+  fontSize: 0.94em
+  normalColor: *backspace_textcolor
+  highlightColor: *backspace_textcolor
 
 功能键前景: &Function_qj
   center:
     x: 0.5
     y: 0.5
-  fontSize: 0.75em
+  fontSize: 0.94em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
@@ -337,9 +320,9 @@ verticalCandidateOfCandidateStyle:
   separatorColor: 00000000
   highlightBackgroundColor: 00000000
   preferredBackgroundColor: 00000000
-  preferredIndexColor: *textfirst_color
-  preferredTextColor: *textfirst_color
-  preferredCommentColor: *textfirst_color
+  preferredIndexColor: *text_Color
+  preferredTextColor: *text_Color
+  preferredCommentColor: *text_Color
   indexColor: *text_Color
   textColor: *text_Color
   commentColor: *text_Color
@@ -387,111 +370,38 @@ verticalCandidateBackspaceButtonForegroundStyle:
 keyboard:
   style: keyboardStyle
   subviews:
-  - VStack:
-      style: columnStyle1
+  - HStack:
       subviews:
-      - HStack:
-          style: HStackStyle1
-          subviews:
-          - Cell: categoryCollection
-          - Cell: descriptionCollection
-      - HStack:
-          style: HStackStyle2
-          subviews:
-          - Cell: returnButton1
-          - Cell: pageUpButton
-          - Cell: pageDownButton
-          - Cell: lockButton
-          - Cell: backspaceButton1
-  - VStack:
-      style: columnStyle2
+      - Cell: categoryCollection
+      - Cell: descriptionCollection
+  - HStack:
+      style: HStackStyle
       subviews:
-      - HStack:
-          style: HStackStyle3
-          subviews:
-          - Cell: 加
-          - Cell: 1Button
-          - Cell: 2Button
-          - Cell: 3Button
-      - HStack:
-          style: HStackStyle3
-          subviews:
-          - Cell: 减
-          - Cell: 4Button
-          - Cell: 5Button
-          - Cell: 6Button
-      - HStack:
-          style: HStackStyle3
-          subviews:
-          - Cell: 乘
-          - Cell: 7Button
-          - Cell: 8Button
-          - Cell: 9Button
-      - HStack:
-          style: HStackStyle2
-          subviews:
-          - Cell: 除
-          - Cell: equalButton
-          - Cell: 0Button
-          - Cell: periodButton
-  - VStack:
-      style: columnStyle3
-      subviews:
-      - HStack:
-          style: HStackStyle1
-          subviews:
-          - Cell: descriptionCollection
-          - Cell: categoryCollection
-      - HStack:
-          style: HStackStyle2
-          subviews:
-          - Cell: returnButton2
-          - Cell: pageUpButton
-          - Cell: pageDownButton
-          - Cell: lockButton
-          - Cell: backspaceButton2
-
-columnStyle1:
-  size:
-    width: 2/5
-
-columnStyle2:
-  size:
-    width: 1/5
-
-columnStyle3:
-  size:
-    width: 2/5
-
-VStackStyle1:
-  size:
-    width: 1/4
-
-VStackStyle2:
-  size:
-    width: 1/4
-
-HStackStyle1:
-HStackStyle2:
-  size:
-    height: 2.2/10
-HStackStyle3:
+      - Cell: returnButton
+      - Cell: pageUpButton
+      - Cell: pageDownButton
+      - Cell: lockButton
+      - Cell: backspaceButton
 
 keyboardStyle:
   insets: {top: 1}
   backgroundStyle: keyboardBackgroundStyle
 
+HStackStyle:
+  size:
+    height: 2.2/10
+
 #类别页
 categoryCollection:
   size:
-    width: 1/5
+    width: 60/375
   backgroundStyle: categoryCollectionButtonBackgroundStyle
   type: classifiedSymbols
   dataSource: category
   cellStyle: collectionCellStyle
 
 categoryCollectionButtonBackgroundStyle:
-  <<: *Function_bg
+  <<: *lb_bj
 
 collectionCellStyle:
   backgroundStyle: collectionCellBackgroundStyle
@@ -506,7 +416,7 @@ collectionCellForegroundStyle:
 #详情页
 descriptionCollection:
   size:
-    width: 4/5
+    width: 315/375
   backgroundStyle: descriptionCollectionButtonBackgroundStyle
   type: subClassifiedSymbols
   cellStyle: descriptionCollectionStyle
@@ -521,14 +431,9 @@ descriptionCollectionStyle:
 descriptionCollectionForegroundStyle:
   <<: *lb
 
-returnButton1:
+returnButton:
   size:
-    width: 1/5
-  backgroundStyle: returnButtonBackgroundStyle
-  foregroundStyle: returnButtonForegroundStyle
-  action: returnPrimaryKeyboard
-
-returnButton2:
+    width: 60/375
   backgroundStyle: returnButtonBackgroundStyle
   foregroundStyle: returnButtonForegroundStyle
   action: returnPrimaryKeyboard
@@ -543,6 +448,8 @@ returnButtonForegroundStyle:
   <<: *Function_qj
 
 pageUpButton:
+  size:
+    width: 85/375
   backgroundStyle: systemButtonBackgroundStyle
   foregroundStyle: pageUpButtonForegroundStyle
   action: pageUp
@@ -557,6 +464,8 @@ pageUpButtonForegroundStyle:
   <<: *Function_qj
 
 pageDownButton:
+  size:
+    width: 85/375
   backgroundStyle: systemButtonBackgroundStyle
   foregroundStyle: pageDownButtonForegroundStyle
   action: pageDown
@@ -567,6 +476,8 @@ pageDownButtonForegroundStyle:
   <<: *Function_qj
 
 lockButton:
+  size:
+    width: 85/375
   backgroundStyle: lockButtonBackgroundStyle
   foregroundStyle: |-
     // JavaScript
@@ -589,15 +500,9 @@ unlockButtonForegroundStyle:
   systemImageName: lock.open.fill
   <<: *Function_qj
 
-backspaceButton1:
-  backgroundStyle: backspaceButtonBackgroundStyle
-  foregroundStyle: backspaceButtonForegroundStyle
-  action: backspace
-  repeatAction: backspace
-
-backspaceButton2:
+backspaceButton:
   size:
-    width: 1/5
+    width: 60/375
   backgroundStyle: backspaceButtonBackgroundStyle
   foregroundStyle: backspaceButtonForegroundStyle
   action: backspace
@@ -605,250 +510,12 @@ backspaceButton2:
 
 backspaceButtonBackgroundStyle:
   animation: animation
-  <<: *Function_bg
+  <<: *backspace_bg
 
 backspaceButtonForegroundStyle:
   animation: animation
   systemImageName: delete.left
-  <<: *Function_qj
-
-1Button:
-  backgroundStyle: 1ButtonBackgroundStyle
-  foregroundStyle:
-  - 1ButtonForegroundStyle
-  action: {character: 1}
-
-1ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-1ButtonForegroundStyle:
-  animation: animation
-  text: '1'
-  <<: *szzf
-
-4Button:
-  backgroundStyle: 4ButtonBackgroundStyle
-  foregroundStyle:
-  - 4ButtonForegroundStyle
-  action: {character: 4}
-
-4ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-4ButtonForegroundStyle:
-  animation: animation
-  text: '4'
-  <<: *szzf
-
-7Button:
-  backgroundStyle: 7ButtonBackgroundStyle
-  foregroundStyle:
-  - 7ButtonForegroundStyle
-  action: {character: 7}
-
-7ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-7ButtonForegroundStyle:
-  animation: animation
-  text: '7'
-  <<: *szzf
-
-2Button:
-  backgroundStyle: 2ButtonBackgroundStyle
-  foregroundStyle:
-  - 2ButtonForegroundStyle
-  action: {character: 2}
-
-2ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-2ButtonForegroundStyle:
-  animation: animation
-  text: '2'
-  <<: *szzf
-
-5Button:
-  backgroundStyle: 5ButtonBackgroundStyle
-  foregroundStyle:
-  - 5ButtonForegroundStyle
-  action: {character: 5}
-
-5ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-5ButtonForegroundStyle:
-  animation: animation
-  text: '5'
-  <<: *szzf
-
-8Button:
-  backgroundStyle: 8ButtonBackgroundStyle
-  foregroundStyle:
-  - 8ButtonForegroundStyle
-  action: {character: 8}
-
-8ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-8ButtonForegroundStyle:
-  animation: animation
-  text: '8'
-  <<: *szzf
-
-0Button:
-  backgroundStyle: 0ButtonBackgroundStyle
-  foregroundStyle:
-  - 0ButtonForegroundStyle
-  action: {character: 0}
-
-0ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-0ButtonForegroundStyle:
-  animation: animation
-  text: '0'
-  <<: *szzf
-
-3Button:
-  backgroundStyle: 3ButtonBackgroundStyle
-  foregroundStyle:
-  - 3ButtonForegroundStyle
-  action: {character: 3}
-
-3ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-3ButtonForegroundStyle:
-  animation: animation
-  text: '3'
-  <<: *szzf
-
-6Button:
-  backgroundStyle: 6ButtonBackgroundStyle
-  foregroundStyle:
-  - 6ButtonForegroundStyle
-  action: {character: 6}
-
-6ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-6ButtonForegroundStyle:
-  animation: animation
-  text: '6'
-  <<: *szzf
-
-9Button:
-  backgroundStyle: 9ButtonBackgroundStyle
-  foregroundStyle:
-  - 9ButtonForegroundStyle
-  action: {character: 9}
-
-9ButtonBackgroundStyle:
-  animation: animation
-  <<: *key_bg
-
-9ButtonForegroundStyle:
-  animation: animation
-  text: '9'
-  <<: *szzf
-
-加:
-  backgroundStyle: 加BackgroundStyle
-  foregroundStyle:
-  - 加ForegroundStyle
-  action: {character: +}
-
-加BackgroundStyle:
-  <<: *key_bg
-
-加ForegroundStyle:
-  animation: animation
-  text: +
-  <<: *yxfh_qj
-
-减:
-  backgroundStyle: 减BackgroundStyle
-  foregroundStyle:
-  - 减ForegroundStyle
-  action: {character: '-'}
-
-减BackgroundStyle:
-  <<: *key_bg
-
-减ForegroundStyle:
-  animation: animation
-  text: '-'
-  <<: *yxfh_qj
-
-乘:
-  backgroundStyle: 乘BackgroundStyle
-  foregroundStyle:
-  - 乘ForegroundStyle
-  action: {character: '*'}
-
-乘BackgroundStyle:
-  <<: *key_bg
-
-乘ForegroundStyle:
-  animation: animation
-  text: ×
-  <<: *yxfh_qj
-
-除:
-  backgroundStyle: 除BackgroundStyle
-  foregroundStyle:
-  - 除ForegroundStyle
-  action: {character: /}
-
-除BackgroundStyle:
-  <<: *key_bg
-
-除ForegroundStyle:
-  animation: animation
-  text: ÷
-  <<: *yxfh_qj
-
-periodButton:
-  backgroundStyle: periodButtonBackgroundStyle
-  foregroundStyle: periodButtonForegroundStyle
-  action: {symbol: .}
-
-periodButtonBackgroundStyle:
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
-  animation: animation
-  <<: *Function_bg
-
-periodButtonForegroundStyle:
-  animation: animation
-  text: ·
-  <<: *period_qj
-
-equalButton:
-  size:
-    height: 1/4
-  backgroundStyle: equalButtonBackgroundStyle
-  foregroundStyle: equalButtonForegroundStyle
-  action: {character: '='}
-
-equalButtonBackgroundStyle:
-  insets: {top: 3, left: 3, bottom: 3, right: 3}
-  animation: animation
-  <<: *Function_bg
-
-equalButtonForegroundStyle:
-  animation: animation
-  text: '='
-  <<: *equal_qj
+  <<: *backspace_qj
 
 dataSource:
   category:

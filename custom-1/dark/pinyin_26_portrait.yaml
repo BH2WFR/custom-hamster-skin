@@ -1,6 +1,6 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 28
-键盘区高度: &keyboard_Height 190
+工具栏高度: &toolbar_Height 30
+键盘区高度: &keyboard_Height 240
 
 编码字体大小: &FontSize_preedit 0.8em
 横排序号字体大小: &FontSize_hpxh 0.6em
@@ -99,7 +99,7 @@
 26键字符: &zf
   center:
     x: 0.5
-    y: 0.75
+    y: 0.80
   fontSize: 1.06em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press

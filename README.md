@@ -8,15 +8,31 @@
 
 
 
-外观:
+## 外观:
 
-<img src="./assets/ce79712eb04b022eda26c8f2e1bd3d1b.png" alt="ce79712eb04b022eda26c8f2e1bd3d1b" style="zoom: 67%;" />
+<img src="./assets/image-20251116205621035.png" alt="image-20251116205621035" style="zoom:50%;" />
 
-<img src="./assets/122ee5f3816a9d7912bf1c9108f9f050.png" alt="122ee5f3816a9d7912bf1c9108f9f050" style="zoom:67%;" />
+<img src="./assets/122ee5f3816a9d7912bf1c9108f9f050.png" alt="122ee5f3816a9d7912bf1c9108f9f050" style="zoom: 50%;" />
+
+<img src="./assets/image-20251116205645869.png" alt="image-20251116205645869" style="zoom:50%;" />
+
+<img src="./assets/image-20251116205654212.png" alt="image-20251116205654212" style="zoom:50%;" />
 
 
 
 
+
+# 使用说明：
+
+## 主题文件
+
+在 `/custom-1` 文件夹中，分亮、暗两个主题；横屏、竖屏、浮动键盘三种模式。
+
+**目前仅在 iPad 上测试，iPhone 上的效果未知。**
+
+
+
+## 针对全拼用户
 
 如果使用的是全拼输入法，请将 `pinyin_26_**.yaml` 文件中
 

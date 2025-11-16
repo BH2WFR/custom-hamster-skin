@@ -1,6 +1,6 @@
-预编辑区高度: &preedit_Height 19
-工具栏高度: &toolbar_Height 35
-键盘区高度: &keyboard_Height 161
+预编辑区高度: &preedit_Height 20
+工具栏高度: &toolbar_Height 30
+键盘区高度: &keyboard_Height 240
 
 编码字体大小: &FontSize_preedit 0.88em
 横排序号字体大小: &FontSize_hpxh 1.19em
@@ -48,6 +48,8 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: FFFFFF
   highlightColor: E3E4E9
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: AEAEAE
   highlightLowerEdgeColor: 26262626
@@ -56,6 +58,8 @@
   type: original
   normalColor: E3E4E9
   highlightColor: 93939744
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: 26262626
   highlightLowerEdgeColor: 17171714
@@ -65,6 +69,8 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: FFFFFF
   highlightColor: FFFFFF
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: B3B3B3
   highlightLowerEdgeColor: B3B3B3
@@ -74,6 +80,8 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: 3379f5
   highlightColor: 296bdf
+  borderSize: 0.7
+  normalBorderColor: 0023B0
   cornerRadius: 5
   normalLowerEdgeColor: 1d61d9
   highlightLowerEdgeColor: 296bdf
@@ -99,7 +107,7 @@
 26键字符: &zf
   center:
     x: 0.5
-    y: 0.8
+    y: 0.85
   fontSize: 0.9em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press
@@ -229,7 +237,7 @@ enter前景: &enter_qj
 数字键前景: &szzf
   center:
     x: 0.5
-    y: 0.75
+    y: 0.80
   fontSize: 0.9em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press
@@ -633,35 +641,6 @@ keyboard:
   style: keyboardStyle
   subviews:
     - VStack:
-        style: columnStyle1
-        subviews:
-          - HStack:
-              subviews:
-                - Cell: qButton
-                - Cell: wButton
-                - Cell: eButton
-                - Cell: rButton
-                - Cell: tButton
-          - HStack:
-              subviews:
-                - Cell: aButton
-                - Cell: sButton
-                - Cell: dButton
-                - Cell: fButton
-                - Cell: gButton
-          - HStack:
-              subviews:
-                - Cell: shiftButton
-                - Cell: zButton
-                - Cell: xButton
-                - Cell: cButton
-                - Cell: vButton
-          - HStack:
-              subviews:
-                - Cell: symButton
-                - Cell: dotButton
-                - Cell: spaceButton
-    - VStack:
         style: columnStyle2
         subviews:
           - VStack:
@@ -691,10 +670,17 @@ keyboard:
                 - Cell: 9Button
                 - Cell: periodButton
     - VStack:
+        style: columnStyle1
+    - VStack:
         style: columnStyle3
         subviews:
           - HStack:
               subviews:
+                - Cell: qButton
+                - Cell: wButton
+                - Cell: eButton
+                - Cell: rButton
+                - Cell: tButton
                 - Cell: yButton
                 - Cell: uButton
                 - Cell: iButton
@@ -702,6 +688,10 @@ keyboard:
                 - Cell: pButton
           - HStack:
               subviews:
+                - Cell: aButton
+                - Cell: sButton
+                - Cell: dButton
+                - Cell: fButton
                 - Cell: gButton
                 - Cell: hButton
                 - Cell: jButton
@@ -709,6 +699,10 @@ keyboard:
                 - Cell: lButton
           - HStack:
               subviews:
+                - Cell: shiftButton
+                - Cell: zButton
+                - Cell: xButton
+                - Cell: cButton
                 - Cell: vButton
                 - Cell: bButton
                 - Cell: nButton
@@ -716,22 +710,27 @@ keyboard:
                 - Cell: backspaceButton
           - HStack:
               subviews:
+                - Cell: symButton
+                - Cell: dotButton
                 - Cell: spaceButton
                 - Cell: cnenButton
                 - Cell: enterButton
 
 columnStyle1:
   size:
-    width: 5/14
+    width:
+      percentage: 0.1
 
 columnStyle2:
   size:
-    width: 4/14
+    width:
+      percentage: 0.3
 
 columnStyle3:
   size:
-    width: 5/14
-
+    width:
+      percentage: 0.6
+    
 VStackStyle1:
   size:
     width: 1/4
@@ -746,7 +745,8 @@ keyboardStyle:
 
 qButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: qButtonBackgroundStyle
   foregroundStyle:
     - qButtonForegroundStyle
@@ -841,7 +841,8 @@ qButtonHoldSymbolsOfForegroundStyle2:
 
 wButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: wButtonBackgroundStyle
   foregroundStyle:
     - wButtonForegroundStyle
@@ -934,7 +935,8 @@ wButtonHoldSymbolsOfForegroundStyle2:
 
 eButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: eButtonBackgroundStyle
   foregroundStyle:
     - eButtonForegroundStyle
@@ -1027,7 +1029,8 @@ eButtonHoldSymbolsForegroundStyle2:
 
 rButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: rButtonBackgroundStyle
   foregroundStyle:
     - rButtonForegroundStyle
@@ -1120,10 +1123,8 @@ rButtonHoldSymbolsForegroundStyle2:
 
 tButton:
   size:
-    width: 200/784
-  bounds:
-    width: 146/200
-    alignment: left
+    width:
+      percentage: 0.1
   backgroundStyle: tButtonBackgroundStyle
   foregroundStyle:
     - tButtonForegroundStyle
@@ -1216,10 +1217,8 @@ tButtonHoldSymbolsForegroundStyle2:
 
 yButton:
   size:
-    width: 200/784
-  bounds:
-    width: 146/200
-    alignment: right
+    width:
+      percentage: 0.1
   backgroundStyle: yButtonBackgroundStyle
   foregroundStyle:
     - yButtonForegroundStyle
@@ -1312,7 +1311,8 @@ yButtonHoldSymbolsForegroundStyle2:
 
 uButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: uButtonBackgroundStyle
   foregroundStyle:
     - uButtonForegroundStyle
@@ -1405,7 +1405,8 @@ uButtonHoldSymbolsForegroundStyle2:
 
 iButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: iButtonBackgroundStyle
   foregroundStyle:
     - iButtonForegroundStyle
@@ -1498,7 +1499,8 @@ iButtonHoldSymbolsForegroundStyle2:
 
 oButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: oButtonBackgroundStyle
   foregroundStyle:
     - oButtonForegroundStyle
@@ -1591,7 +1593,8 @@ oButtonHoldSymbolsForegroundStyle2:
 
 pButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: pButtonBackgroundStyle
   foregroundStyle:
     - pButtonForegroundStyle
@@ -1686,9 +1689,10 @@ pButtonHoldSymbolsOfForegroundStyle2:
 
 aButton:
   size:
-    width: 200/784
+    width:
+      percentage: 0.15
   bounds:
-    width: 146/200
+    width: 2/3
     alignment: right
   backgroundStyle: aButtonBackgroundStyle
   foregroundStyle:
@@ -1776,7 +1780,8 @@ aButtonHoldSymbolsForegroundStyle1:
 
 sButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: sButtonBackgroundStyle
   foregroundStyle:
     - sButtonForegroundStyle
@@ -1875,7 +1880,8 @@ sButtonHoldSymbolsForegroundStyle3:
 
 dButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: dButtonBackgroundStyle
   foregroundStyle:
     - dButtonForegroundStyle
@@ -1970,7 +1976,8 @@ dButtonHoldSymbolsOfForegroundStyle2:
 
 fButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: fButtonBackgroundStyle
   foregroundStyle:
     - fButtonForegroundStyle
@@ -2051,7 +2058,8 @@ fButtonHoldSymbolsForegroundStyle0:
 
 gButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: gButtonBackgroundStyle
   foregroundStyle:
     - gButtonForegroundStyle
@@ -2144,7 +2152,8 @@ gButtonHoldSymbolsForegroundStyle2:
 
 hButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: hButtonBackgroundStyle
   foregroundStyle:
     - hButtonForegroundStyle
@@ -2237,7 +2246,8 @@ hButtonHoldSymbolsForegroundStyle2:
 
 jButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: jButtonBackgroundStyle
   foregroundStyle:
     - jButtonForegroundStyle
@@ -2330,7 +2340,8 @@ jButtonHoldSymbolsForegroundStyle2:
 
 kButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: kButtonBackgroundStyle
   foregroundStyle:
     - kButtonForegroundStyle
@@ -2423,9 +2434,12 @@ kButtonHoldSymbolsForegroundStyle2:
 
 lButton:
   size:
-    width: 200/784
+    width:
+      percentage: 0.15
+    height:
+      percentage: 1
   bounds:
-    width: 146/200
+    width: 2/3
     alignment: left
   backgroundStyle: lButtonBackgroundStyle
   foregroundStyle:
@@ -2519,9 +2533,14 @@ lButtonHoldSymbolsForegroundStyle2:
 
 shiftButton:
   size:
-    width: 200/784
+    width:
+      percentage: 0.15
+    height:
+      percentage: 1
   bounds:
-    width: 190/200
+    width: 95/100
+    height:
+      percentage: 1
     alignment: left
   backgroundStyle: shiftButtonBackgroundStyle
   foregroundStyle:
@@ -2591,7 +2610,8 @@ shiftButtonSwipeDownHintForegroundStyle:
 
 zButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: zButtonBackgroundStyle
   foregroundStyle:
     - zButtonForegroundStyle
@@ -2684,7 +2704,8 @@ zButtonHoldSymbolsForegroundStyle2:
 
 xButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: xButtonBackgroundStyle
   foregroundStyle:
     - xButtonForegroundStyle
@@ -2771,7 +2792,8 @@ xButtonHoldSymbolsForegroundStyle1:
 
 cButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: cButtonBackgroundStyle
   foregroundStyle:
     - cButtonForegroundStyle
@@ -2852,7 +2874,8 @@ cButtonHoldSymbolsForegroundStyle0:
 
 vButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: vButtonBackgroundStyle
   foregroundStyle:
     - vButtonForegroundStyle
@@ -2933,7 +2956,8 @@ vButtonHoldSymbolsForegroundStyle0:
 
 bButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: bButtonBackgroundStyle
   foregroundStyle:
     - bButtonForegroundStyle
@@ -3014,7 +3038,8 @@ bButtonHoldSymbolsForegroundStyle0:
 
 nButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: nButtonBackgroundStyle
   foregroundStyle:
     - nButtonForegroundStyle
@@ -3101,7 +3126,8 @@ nButtonHoldSymbolsForegroundStyle1:
 
 mButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: mButtonBackgroundStyle
   foregroundStyle:
     - mButtonForegroundStyle
@@ -3188,9 +3214,14 @@ mButtonHoldSymbolsForegroundStyle1:
 
 backspaceButton:
   size:
-    width: 200/784
+    width:
+      percentage: 0.15
+    height:
+      percentage: 1
   bounds:
-    width: 190/200
+    width: 95/100
+    height:
+      percentage: 1
     alignment: right
   backgroundStyle: backspaceButtonBackgroundStyle
   foregroundStyle:
@@ -3237,7 +3268,8 @@ backspaceButtonSwipeLeftHintForegroundStyle:
 
 symButton:
   size:
-    width: 292/784
+    width:
+      percentage: 0.135
   backgroundStyle: symButtonBackgroundStyle
   foregroundStyle:
     - symButtonForegroundStyle
@@ -3282,7 +3314,8 @@ symButtonSwipeDownHintForegroundStyle:
 
 dotButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: dotButtonBackgroundStyle
   foregroundStyle:
     - dotButtonForegroundStyle
@@ -3346,8 +3379,6 @@ dotButtonSwipeDownHintForegroundStyle:
   <<: *uhqp
 
 spaceButton:
-  size:
-    width: 346/784
   backgroundStyle: spaceButtonBackgroundStyle
   foregroundStyle: spaceButtonForegroundStyle
   preeditStateForegroundStyle: spaceButtonForegroundStyle1
@@ -3401,7 +3432,8 @@ spaceButtonSwipeRightHintForegroundStyle:
 
 cnenButton:
   size:
-    width: 146/784
+    width:
+      percentage: 0.1
   backgroundStyle: cnenButtonBackgroundStyle
   foregroundStyle:
     - cnenButtonForegroundStyle1
@@ -3482,7 +3514,8 @@ cnenButtonSwipeDownHintForegroundStyle:
 
 enterButton:
   size:
-    width: 292/784
+    width:
+      percentage: 0.22
   backgroundStyle: enterButtonBackgroundStyle
   foregroundStyle:
     - enterButtonForegroundStyle

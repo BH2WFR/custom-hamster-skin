@@ -1,6 +1,6 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 30
-键盘区高度: &keyboard_Height 240
+工具栏高度: &toolbar_Height 32
+键盘区高度: &keyboard_Height 200
 
 编码字体大小: &FontSize_preedit 0.8em
 横排序号字体大小: &FontSize_hpxh 0.6em
@@ -10,13 +10,13 @@
 展开文字字体大小: &FontSize_xlwz 1.0em
 展开注释字体大小: &FontSize_xlvu 0.7em
 
-编码色: &preedit_textColor 070707
-首选色: &textfirst_color 377DFA
-次选色: &text_Color 070707
+编码色: &preedit_textColor FDFDFD
+首选色: &textfirst_color 4c8dff
+次选色: &text_Color FDFDFD
 
-键盘底色: &bg_Color CFD3D800
+键盘底色: &bg_Color 5B5B5B00
 
-按键字符色: &key_textcolor1 070707
+按键字符色: &key_textcolor1 FFFFFF
 删除键字符色: &backspace_textcolor FFFFFF
 角标色: &key_textcolor2 A7AEB9
 
@@ -27,7 +27,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表和详情栏背景色: &zkhxbj F3F4F9
+展开候选列表和详情栏背景色: &zkhxbj 333333
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -45,16 +45,16 @@
 列表栏背景: &lb_bj
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: E3E4E9
-  highlightColor: 93939744
+  normalColor: 4a4d50
+  highlightColor: 4a4d50
   cornerRadius: 6
-  normalLowerEdgeColor: 26262626
-  highlightLowerEdgeColor: 17171714
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
 列表栏高亮背景: &lb_hl
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: FFFFFFBB
+  normalColor: 383838
   cornerRadius: 6
 
 详情栏背景: &xql_bg
@@ -62,28 +62,26 @@
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: *zkhxbj
   cornerRadius: 6
-  normalLowerEdgeColor: 26262626
-  highlightLowerEdgeColor: 17171714
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
 功能键背景: &Function_bg
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: E3E4E9
-  highlightColor: 93939744
-  borderSize: 0.7
-  normalBorderColor: 707070
+  normalColor: 444444
+  highlightColor: 999999
   cornerRadius: 6
-  normalLowerEdgeColor: 26262626
-  highlightLowerEdgeColor: 17171714
+  normalLowerEdgeColor: 181818
+  highlightLowerEdgeColor: 181818
 
 backspace背景: &backspace_bg
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: 3379f5
-  highlightColor: 296bdf
+  normalColor: 2A64C7
+  highlightColor: 4082F3
   cornerRadius: 6
-  normalLowerEdgeColor: 1d61d9
-  highlightLowerEdgeColor: 296bdf
+  normalLowerEdgeColor: 222222
+  highlightLowerEdgeColor: 222222
 
 backspace前景: &backspace_qj
   center:

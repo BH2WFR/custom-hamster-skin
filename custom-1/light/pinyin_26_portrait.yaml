@@ -1,6 +1,6 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 28
-键盘区高度: &keyboard_Height 190
+工具栏高度: &toolbar_Height 30
+键盘区高度: &keyboard_Height 240
 
 编码字体大小: &FontSize_preedit 0.8em
 横排序号字体大小: &FontSize_hpxh 0.6em
@@ -48,6 +48,8 @@
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: FFFFFF
   highlightColor: E3E4E9
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: AEAEAE
   highlightLowerEdgeColor: 26262626
@@ -56,6 +58,8 @@
   type: original
   normalColor: E3E4E9
   highlightColor: 93939744
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: 26262626
   highlightLowerEdgeColor: 17171714
@@ -65,6 +69,8 @@
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: FFFFFF
   highlightColor: FFFFFF
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: B3B3B3
   highlightLowerEdgeColor: B3B3B3
@@ -74,6 +80,8 @@
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
   normalColor: 3379f5
   highlightColor: 296bdf
+  borderSize: 0.7
+  normalBorderColor: 0023B0
   cornerRadius: 5
   normalLowerEdgeColor: 1d61d9
   highlightLowerEdgeColor: 296bdf
@@ -99,7 +107,7 @@
 26键字符: &zf
   center:
     x: 0.5
-    y: 0.75
+    y: 0.80
   fontSize: 1.06em
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1_press

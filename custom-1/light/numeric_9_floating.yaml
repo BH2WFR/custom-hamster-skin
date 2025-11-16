@@ -1,6 +1,6 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 30
-键盘区高度: &keyboard_Height 240
+工具栏高度: &toolbar_Height 32
+键盘区高度: &keyboard_Height 200
 
 编码字体大小: &FontSize_preedit 0.8em
 横排序号字体大小: &FontSize_hpxh 0.6em
@@ -10,14 +10,14 @@
 展开文字字体大小: &FontSize_xlwz 1.0em
 展开注释字体大小: &FontSize_xlvu 0.7em
 
-编码色: &preedit_textColor FDFDFD
-首选色: &textfirst_color 4c8dff
-次选色: &text_Color FDFDFD
+编码色: &preedit_textColor 070707
+首选色: &textfirst_color 377DFA
+次选色: &text_Color 070707
 
-键盘底色: &bg_Color 5B5B5B00
+键盘底色: &bg_Color CFD3D800
 
-按键字符正常色: &key_textcolor1 FFFFFF
-按键字符高亮色: &key_textcolor1_press FFFFFF
+按键字符正常色: &key_textcolor1 070707
+按键字符高亮色: &key_textcolor1_press 070707
 回车键字符色: &enter_textcolor FFFFFF
 
 状态栏图标缩放: &toolbarButton_targetScale 0.55
@@ -27,7 +27,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表背景色: &zkhxbj 333333
+展开候选列表背景色: &zkhxbj E3E4E9
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -43,32 +43,32 @@
 列表栏高亮背景: &lb_hl
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: 66696e
+  normalColor: FFFFFFBB
   cornerRadius: 6
 
 数字键背景: &key_bg
   type: original
-  normalColor: 808080
-  highlightColor: AAAAAA
+  normalColor: FFFFFF
+  highlightColor: E3E4E9
   cornerRadius: 6
-  normalLowerEdgeColor: 181818
-  highlightLowerEdgeColor: 181818
+  normalLowerEdgeColor: AEAEAE
+  highlightLowerEdgeColor: 888888
 
 功能键背景: &Function_bg
   type: original
-  normalColor: 444444
-  highlightColor: 999999
+  normalColor: E3E4E9
+  highlightColor: 93939744
   cornerRadius: 6
-  normalLowerEdgeColor: 181818
-  highlightLowerEdgeColor: 181818
+  normalLowerEdgeColor: 26262626
+  highlightLowerEdgeColor: 17171714
 
 回车键背景: &Enter_bg
   type: original
-  normalColor: 2A64C7
-  highlightColor: 4082F3
+  normalColor: 3379f5
+  highlightColor: 296bdf
   cornerRadius: 6
-  normalLowerEdgeColor: 222222
-  highlightLowerEdgeColor: 222222
+  normalLowerEdgeColor: 555555
+  highlightLowerEdgeColor: AEAEAE
 
 数字键前景: &zf
   center:

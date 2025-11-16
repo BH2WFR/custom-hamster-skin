@@ -1,6 +1,6 @@
-预编辑区高度: &preedit_Height 19
-工具栏高度: &toolbar_Height 35
-键盘区高度: &keyboard_Height 161
+预编辑区高度: &preedit_Height 20
+工具栏高度: &toolbar_Height 30
+键盘区高度: &keyboard_Height 240
 
 编码字体大小: &FontSize_preedit 0.88em
 横排序号字体大小: &FontSize_hpxh 1.19em
@@ -70,6 +70,8 @@
   insets: { top: 3, left: 3, bottom: 3, right: 3 }
   normalColor: E3E4E9
   highlightColor: 93939744
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
   normalLowerEdgeColor: 26262626
   highlightLowerEdgeColor: 17171714

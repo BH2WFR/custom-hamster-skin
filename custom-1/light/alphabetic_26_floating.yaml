@@ -1,6 +1,6 @@
 预编辑区高度: &preedit_Height 20
-工具栏高度: &toolbar_Height 30
-键盘区高度: &keyboard_Height 240
+工具栏高度: &toolbar_Height 32
+键盘区高度: &keyboard_Height 200
 
 编码字体大小: &FontSize_preedit 0.8em
 横排序号字体大小: &FontSize_hpxh 0.6em
@@ -10,16 +10,16 @@
 展开文字字体大小: &FontSize_xlwz 1.0em
 展开注释字体大小: &FontSize_xlvu 0.7em
 
-编码色: &preedit_textColor FDFDFD
-首选色: &textfirst_color 4c8dff
-次选色: &text_Color FDFDFD
+编码色: &preedit_textColor 070707
+首选色: &textfirst_color 377DFA
+次选色: &text_Color 070707
 
-键盘底色: &bg_Color 5B5B5B00
+键盘底色: &bg_Color CFD3D800
 
-按键字符正常色: &key_textcolor1 FFFFFF
-按键字符高亮色: &key_textcolor1_press FFFFFF
-上下划字符正常色: &key_textcolor2 D3D7DF
-上下划字符高亮色: &key_textcolor2_press FFFFFF
+按键字符正常色: &key_textcolor1 070707
+按键字符高亮色: &key_textcolor1_press 070707
+上下划字符正常色: &key_textcolor2 727272
+上下划字符高亮色: &key_textcolor2_press 555555
 回车键字符色: &enter_textcolor FFFFFF
 
 按下气泡字符色: &axqp_Color FFFFFF
@@ -34,7 +34,7 @@
   normalColor: *key_textcolor1
   highlightColor: *key_textcolor1
 
-展开候选列表背景色: &zkhxbj 333333
+展开候选列表背景色: &zkhxbj E3E4E9
 
 展开候选功能键字符样式: &zkhx
   center:
@@ -46,37 +46,45 @@
 字符键背景: &key_bg
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: 808080
-  highlightColor: AAAAAA
+  normalColor: FFFFFF
+  highlightColor: E3E4E9
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
-  normalLowerEdgeColor: 181818
-  highlightLowerEdgeColor: 181818
+  normalLowerEdgeColor: AEAEAE
+  highlightLowerEdgeColor: 26262626
 
 功能键背景: &Function_bg
   type: original
-  normalColor: 444444
-  highlightColor: 999999
+  normalColor: E3E4E9
+  highlightColor: 93939744
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
-  normalLowerEdgeColor: 181818
-  highlightLowerEdgeColor: 181818
+  normalLowerEdgeColor: 26262626
+  highlightLowerEdgeColor: 17171714
 
 空格背景: &space_bg
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: 808080
-  highlightColor: AAAAAA
+  normalColor: FFFFFF
+  highlightColor: FFFFFF
+  borderSize: 0.7
+  normalBorderColor: 707070
   cornerRadius: 5
-  normalLowerEdgeColor: 181818
-  highlightLowerEdgeColor: 181818
+  normalLowerEdgeColor: B3B3B3
+  highlightLowerEdgeColor: B3B3B3
 
 回车键背景: &Enter_bg
   type: original
   insets: {top: 3.5, left: 2.5, bottom: 3.5, right: 2.5}
-  normalColor: 2A64C7
-  highlightColor: 4082F3
+  normalColor: 3379f5
+  highlightColor: 296bdf
+  borderSize: 0.7
+  normalBorderColor: 0023B0
   cornerRadius: 5
-  normalLowerEdgeColor: 222222
-  highlightLowerEdgeColor: 222222
+  normalLowerEdgeColor: 1d61d9
+  highlightLowerEdgeColor: 296bdf
 
 中英前景1: &cnen_qj1
   center:
@@ -93,7 +101,7 @@
     y: 0.95
   text: /中
   fontSize: 0.6em
-  normalColor: *key_textcolor2 #A1A5AE
+  normalColor: *key_textcolor2
   highlightColor: *key_textcolor2
 
 26键字符: &zf
@@ -141,8 +149,8 @@
     x: 0.8
     y: 0.22
   fontSize: 0.5em
-  normalColor: *key_textcolor2
-  highlightColor: *key_textcolor2_press
+  normalColor: EEEEEE
+  highlightColor: EEEEEE
 
 Shift前景: &Shift_qj
   center:
